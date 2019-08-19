@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OCD_Therapy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="aEu-b2-fG9">
+                                <rect key="frame" x="0.0" y="-12" width="414" height="920"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IERP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D94-M5-Kf7">
+                                <rect key="frame" x="138.5" y="406" width="137.5" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="D94-M5-Kf7" secondAttribute="height" multiplier="31:19" id="nL1-Aq-1R9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="63"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OCD Therapy Assistance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6S-5I-KDC">
+                                <rect key="frame" x="98" y="565" width="218.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nio-Ry-rEl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <connections>
+                                    <segue destination="hhE-sU-xK8" kind="showDetail" id="NSb-fN-C2T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="q6S-5I-KDC" firstAttribute="top" secondItem="D94-M5-Kf7" secondAttribute="bottom" constant="75" id="1Yr-cR-70X"/>
+                            <constraint firstItem="nio-Ry-rEl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="54r-Cc-Wl7"/>
+                            <constraint firstItem="nio-Ry-rEl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Dgs-5M-j0k"/>
+                            <constraint firstItem="aEu-b2-fG9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hk8-C0-fZS"/>
+                            <constraint firstItem="nio-Ry-rEl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Isy-TX-vd3"/>
+                            <constraint firstItem="D94-M5-Kf7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pd9-n5-ibq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nio-Ry-rEl" secondAttribute="trailing" id="Q5K-iw-Cod"/>
+                            <constraint firstItem="nio-Ry-rEl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RHl-Nx-XAr"/>
+                            <constraint firstItem="q6S-5I-KDC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="glY-BQ-1AZ"/>
+                            <constraint firstItem="nio-Ry-rEl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jFm-CN-9AY"/>
+                            <constraint firstItem="aEu-b2-fG9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-12" id="l4E-3z-hoY"/>
+                            <constraint firstItem="D94-M5-Kf7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lN7-4b-4Ui"/>
+                            <constraint firstItem="aEu-b2-fG9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sZx-Or-1xI"/>
+                            <constraint firstItem="nio-Ry-rEl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sbT-Jv-96J"/>
+                            <constraint firstAttribute="bottom" secondItem="aEu-b2-fG9" secondAttribute="bottom" constant="-12" id="soX-0Q-G4A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nio-Ry-rEl" secondAttribute="bottom" id="vv0-P6-pmh"/>
+                            <constraint firstItem="nio-Ry-rEl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wEe-M3-xmH"/>
+                            <constraint firstItem="nio-Ry-rEl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ybL-kh-Imj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="133.92857142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mp8-Ui-fEL">
+            <objects>
+                <viewController id="hhE-sU-xK8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0t4-zC-epq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuI-qe-4X6">
+                                <rect key="frame" x="159.5" y="425" width="95" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="RfA-bi-DgS">
+                                <rect key="frame" x="0.0" y="-12" width="414" height="920"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IERP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILe-Uo-1Y2">
+                                <rect key="frame" x="138.5" y="106" width="137.5" height="75.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="63"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgg-3D-Hux">
+                                <rect key="frame" x="148" y="268" width="118" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Add An Exposure">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TuI-qe-4X6" firstAttribute="centerX" secondItem="0t4-zC-epq" secondAttribute="centerX" id="8nT-SK-lBr"/>
+                            <constraint firstItem="Mgg-3D-Hux" firstAttribute="centerX" secondItem="0t4-zC-epq" secondAttribute="centerX" id="DjU-rw-sFg"/>
+                            <constraint firstItem="TuI-qe-4X6" firstAttribute="centerY" secondItem="0t4-zC-epq" secondAttribute="centerY" id="G1E-qg-LfU"/>
+                            <constraint firstItem="ILe-Uo-1Y2" firstAttribute="top" secondItem="dSM-4X-Sxn" secondAttribute="top" constant="62" id="Our-q5-N4l"/>
+                            <constraint firstItem="ILe-Uo-1Y2" firstAttribute="centerX" secondItem="0t4-zC-epq" secondAttribute="centerX" id="uD2-7J-701"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dSM-4X-Sxn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0pe-yD-EK3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWK-dr-Ici" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_image" width="300" height="450"/>
+    </resources>
+</document>
