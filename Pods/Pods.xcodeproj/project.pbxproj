@@ -1,0 +1,1262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00620E71264E0E954D667CEAD6BD0E99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6249D0DEDE09097FCB7FFE25FCBD3B7 /* UIKit.framework */; };
+		030FCBCF4FD8CD3905C39EDA654D29BD /* PopupDialogDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E1B5DB84EA4788EB57A8EF76441014 /* PopupDialogDefaultViewController.swift */; };
+		08452A247B58228DFFC77D7BA30DD668 /* DynamicBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = C37D8C067EACA1141EEFABB3B1E77CEF /* DynamicBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F82656B116745EE31DB985B8096CD60 /* UIImageView+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A0233AF228EF570291855F9CA83D30 /* UIImageView+Calculations.swift */; };
+		11F5BD2F4536CB1F8EBB66A773E09D80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C277DDAFE68A195EDF8E21573219773 /* Foundation.framework */; };
+		169D250E01A497F88370028FD950A37C /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A0B0BBBFF23D652476653E570E7FF9 /* TransitionAnimator.swift */; };
+		18643D4F9BC327B1E5B9175F4260AC0E /* DynamicBlurView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF090410A384ACFD3D028A86F6D8BAA4 /* DynamicBlurView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C14E028D177632DF0B363082E85E536 /* CGImage+Accelerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08349774DC40603F5B53636C96B27E39 /* CGImage+Accelerate.swift */; };
+		225555187BFD67F7F6DADEA6C73C567F /* PopupDialogContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A54A3C1068FA0E5B0D7B145236A46F /* PopupDialogContainerView.swift */; };
+		37AFD441D3948E62ABBFFBDC662F6DB6 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1114F602E2F726B78794ACB0768A42 /* UIView+Animations.swift */; };
+		4034F92FF12081304D2D718CF7904FC3 /* Pods-OCD Therapy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E04474DF09B498D9F20B2AB74437905B /* Pods-OCD Therapy-dummy.m */; };
+		42414824559FA605DF0EDCD382366DBD /* DynamicBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232F03856A6A86BF9796C2F2527FD701 /* DynamicBlurView.swift */; };
+		4C6E460A6B911AFFD987F78AC59B7466 /* DynamicBlurView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48605496EA7A8E9439C53C0835B30AC5 /* DynamicBlurView.framework */; };
+		5546955AFBE8D354D17380A294A25CE6 /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF8B4D127F70760C260BFFF6C763DFD /* PopupDialog.swift */; };
+		73D0683E05F3565AE7175088B7CE6DC0 /* PopupDialog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD928449EB8FA9DC1C7EB240BA8E4F1 /* PopupDialog-dummy.m */; };
+		7A009CFEBD7D09FB5DA532F54EB9FBEF /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F715F9CF622F444012A74A38DA41B5 /* TransitionAnimations.swift */; };
+		7EBE128BBA4CC34DBF4853B1E747C724 /* DynamicBlurView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32131236F091B22C918A5A7B899869AA /* DynamicBlurView-dummy.m */; };
+		81156AE99DEF656F29B13B8176CDC3B5 /* CGContext+CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C947756D18FF60F2FB5440F6409F3B /* CGContext+CGImage.swift */; };
+		83B9E5412A63412A151E0092BF6AF7CA /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4DE8D29CF5880B34F9025283CB02 /* PresentationManager.swift */; };
+		8C1E544BEBEEAC2A00D08696C69CC48A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C277DDAFE68A195EDF8E21573219773 /* Foundation.framework */; };
+		90C686FF7147C15B339B37DBE7685321 /* Pods-OCD Therapy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A8F16D6741AE793973CBEF20A75F8C3 /* Pods-OCD Therapy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		928FFA6E7256231E743768EBC78E36A7 /* PopupDialog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B486EC9286DCEBD1DEE6D3B985940BC3 /* PopupDialog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B45F788C4CE05D2DC0686432FB0EE22 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 698C7792749D8F8A29699C4E3B5CA919 /* Accelerate.framework */; };
+		A254857FE369E684CBE3B4F6F292239D /* PopupDialogDefaultButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20A19FAAE397396E3945C6EB516E98 /* PopupDialogDefaultButtons.swift */; };
+		A94100505467526DB734FAB115BF715C /* PopupDialogOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83740A70FF16E61C4E50A5CE8555804 /* PopupDialogOverlayView.swift */; };
+		AA80828FA65308F59E88F8D1315E86E8 /* Pods-OCD TherapyTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B3428ACA7F1F8E5634BFE548043C6D /* Pods-OCD TherapyTests-dummy.m */; };
+		ADED01278E76134B063BCB7178FA4CC3 /* Pods-OCD TherapyTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFC2974242D589A51C7FB5B2C78EE804 /* Pods-OCD TherapyTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B18FE5EE478D75593AE4D0C6B1E6506F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C277DDAFE68A195EDF8E21573219773 /* Foundation.framework */; };
+		B2F489FB022F836FB35B3FEABF68903C /* PopupDialog+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16839F4D08275FCF4F6343C27D24118 /* PopupDialog+Keyboard.swift */; };
+		B52BCD660C0CA96651CA9AEAB5672D7B /* CaptureQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9C234A224C8C10E731FF32F401B16 /* CaptureQuality.swift */; };
+		C08A03032406A24E285B680ACE7A9E73 /* TrackingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EB0CD8923A05F0E44020A7A9DAABB /* TrackingMode.swift */; };
+		C2B49D1C5254C81DBE46B6BC9CE03CED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C277DDAFE68A195EDF8E21573219773 /* Foundation.framework */; };
+		C9D87D93855954B4B23CDB647DEB7D0E /* PopupDialogDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9669674F96FCA5913E7D076D64938 /* PopupDialogDefaultView.swift */; };
+		D3D077D4DAA3DB5AE89C18A7CEC7D189 /* Pods-OCD TherapyUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84802CAF19FCC45CB73AA7C00D6EC418 /* Pods-OCD TherapyUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D82DC5AAA5AA0E1A33EFE457C493D755 /* UIViewController+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2F1A1CFC969283C83EC30D201C24E /* UIViewController+Visibility.swift */; };
+		D9F9E9336475EE7188F8F29DDE0A2EB1 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F3D9F5A4D97765916C90C55E497A70 /* PresentationController.swift */; };
+		DCEE2E72739ADFB7890C33BC35099C01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C277DDAFE68A195EDF8E21573219773 /* Foundation.framework */; };
+		DD2F32642C7F57A4EE71C41F183FEAC8 /* BlurLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198453015ECD61507E6C90BEF20E2786 /* BlurLayer.swift */; };
+		E578A344ECD97A6EC957AB3E82B3723D /* Pods-OCD TherapyUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAED71CD5CC6CFEE5AA8BA048A1CD06 /* Pods-OCD TherapyUITests-dummy.m */; };
+		E9157FAB5F209124A32CE9C3BB6B6027 /* UIImage+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22E5967B702A8AE58C05FB0A894A458 /* UIImage+Blur.swift */; };
+		EC78D8A8141D8268D6382866CDF8F16A /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EEDE59D287D5C562E7755AAA3B4553 /* InteractiveTransition.swift */; };
+		F82E29CC1BF7165FF77D9C4A387357A7 /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D3FA8D17BA7AC64363C4CAAE5D0D0 /* PopupDialogButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2763FCA98104FEE93EB4E54D32DDF454 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D914FA2F03C860D5133BA2DB87C594A;
+			remoteInfo = DynamicBlurView;
+		};
+		59425F53DA6CB86BF9F92F5C9BDB2014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38B6B339441B468552E2586F0DC2BAB;
+			remoteInfo = "Pods-OCD Therapy";
+		};
+		A5365386C18772090BD192FF18138811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38B6B339441B468552E2586F0DC2BAB;
+			remoteInfo = "Pods-OCD Therapy";
+		};
+		ABE905DCE3686B102A4CF6227D02004D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E71929B582F8CD57B3DC1FD6560F047;
+			remoteInfo = PopupDialog;
+		};
+		F531C2EF30AF6FFCAACFE82D644B4487 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D914FA2F03C860D5133BA2DB87C594A;
+			remoteInfo = DynamicBlurView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06E571BD03EACF0663EACED3C7F7CAA7 /* PopupDialog-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PopupDialog-Info.plist"; sourceTree = "<group>"; };
+		08349774DC40603F5B53636C96B27E39 /* CGImage+Accelerate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGImage+Accelerate.swift"; path = "DynamicBlurView/CGImage+Accelerate.swift"; sourceTree = "<group>"; };
+		0B20A19FAAE397396E3945C6EB516E98 /* PopupDialogDefaultButtons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultButtons.swift; path = PopupDialog/Classes/PopupDialogDefaultButtons.swift; sourceTree = "<group>"; };
+		0EE2F1A1CFC969283C83EC30D201C24E /* UIViewController+Visibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Visibility.swift"; path = "PopupDialog/Classes/UIViewController+Visibility.swift"; sourceTree = "<group>"; };
+		12F715F9CF622F444012A74A38DA41B5 /* TransitionAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimations.swift; path = PopupDialog/Classes/TransitionAnimations.swift; sourceTree = "<group>"; };
+		198453015ECD61507E6C90BEF20E2786 /* BlurLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurLayer.swift; path = DynamicBlurView/BlurLayer.swift; sourceTree = "<group>"; };
+		1A8F16D6741AE793973CBEF20A75F8C3 /* Pods-OCD Therapy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OCD Therapy-umbrella.h"; sourceTree = "<group>"; };
+		1C7099E3070E26088F21E0FD0DB831FC /* Pods_OCD_TherapyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OCD_TherapyTests.framework; path = "Pods-OCD TherapyTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1B1EB73907A2D3AC61200CF4B93F70 /* PopupDialog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PopupDialog.modulemap; sourceTree = "<group>"; };
+		232F03856A6A86BF9796C2F2527FD701 /* DynamicBlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicBlurView.swift; path = DynamicBlurView/DynamicBlurView.swift; sourceTree = "<group>"; };
+		2B1114F602E2F726B78794ACB0768A42 /* UIView+Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Animations.swift"; path = "PopupDialog/Classes/UIView+Animations.swift"; sourceTree = "<group>"; };
+		2D2D2EF5519DC28B6D4E6A4462EF8183 /* PopupDialog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PopupDialog.xcconfig; sourceTree = "<group>"; };
+		32131236F091B22C918A5A7B899869AA /* DynamicBlurView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicBlurView-dummy.m"; sourceTree = "<group>"; };
+		34CE16F2B33C2CEA5F373D46D06FBB79 /* Pods-OCD TherapyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OCD TherapyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		34FB964502259D0FF233CE71CFDD2A71 /* PopupDialog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PopupDialog.framework; path = PopupDialog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		356FD73BD23086201B263692AAE53C6B /* Pods-OCD TherapyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OCD TherapyTests.modulemap"; sourceTree = "<group>"; };
+		37B3428ACA7F1F8E5634BFE548043C6D /* Pods-OCD TherapyTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OCD TherapyTests-dummy.m"; sourceTree = "<group>"; };
+		3B0FE5AFBFC29420B0AAB6B28854AD43 /* Pods-OCD TherapyUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OCD TherapyUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3C114447E3F8F81F52B87254A64E4171 /* Pods-OCD Therapy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OCD Therapy.modulemap"; sourceTree = "<group>"; };
+		400527A853BD6FF87262549FAA42DD1E /* Pods-OCD Therapy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OCD Therapy-Info.plist"; sourceTree = "<group>"; };
+		473EF16596E5A0DB623147279319B087 /* Pods-OCD TherapyTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OCD TherapyTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		48605496EA7A8E9439C53C0835B30AC5 /* DynamicBlurView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicBlurView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C277DDAFE68A195EDF8E21573219773 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4DA73D75612DC697539DC6BE8C4A9FE6 /* Pods-OCD Therapy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OCD Therapy-acknowledgements.markdown"; sourceTree = "<group>"; };
+		51C947756D18FF60F2FB5440F6409F3B /* CGContext+CGImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGContext+CGImage.swift"; path = "DynamicBlurView/CGContext+CGImage.swift"; sourceTree = "<group>"; };
+		523EB0CD8923A05F0E44020A7A9DAABB /* TrackingMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrackingMode.swift; path = DynamicBlurView/TrackingMode.swift; sourceTree = "<group>"; };
+		5A381E5E7DB4C5C417A1B77F6571AE84 /* Pods_OCD_Therapy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OCD_Therapy.framework; path = "Pods-OCD Therapy.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60A54A3C1068FA0E5B0D7B145236A46F /* PopupDialogContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogContainerView.swift; path = PopupDialog/Classes/PopupDialogContainerView.swift; sourceTree = "<group>"; };
+		698C7792749D8F8A29699C4E3B5CA919 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		69F3D9F5A4D97765916C90C55E497A70 /* PresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationController.swift; path = PopupDialog/Classes/PresentationController.swift; sourceTree = "<group>"; };
+		6AF6218FE29EC0269E22A359F4D0F0E9 /* DynamicBlurView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DynamicBlurView-Info.plist"; sourceTree = "<group>"; };
+		6CF97EA4FC73C3CAC79A3997658D4D06 /* DynamicBlurView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DynamicBlurView.modulemap; sourceTree = "<group>"; };
+		6E4B67616545878191520F0AE99D8FFE /* PopupDialog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopupDialog-prefix.pch"; sourceTree = "<group>"; };
+		70363E4F3EDFC3BD9AEE292E18B0D6F8 /* Pods-OCD TherapyUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OCD TherapyUITests.modulemap"; sourceTree = "<group>"; };
+		732DC0DE2FBD9693FFC670B22254FEA2 /* Pods-OCD TherapyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OCD TherapyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7BF64A6B2AE146DB55781FB2CF38B2E1 /* DynamicBlurView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicBlurView.xcconfig; sourceTree = "<group>"; };
+		7CE18716CD775779F74290A59F671954 /* Pods-OCD Therapy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OCD Therapy.debug.xcconfig"; sourceTree = "<group>"; };
+		81BD352EB9CCA6A6848FF03007F60E61 /* Pods-OCD TherapyTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OCD TherapyTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		84802CAF19FCC45CB73AA7C00D6EC418 /* Pods-OCD TherapyUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OCD TherapyUITests-umbrella.h"; sourceTree = "<group>"; };
+		868AD97655B68063963EDAB5220791F2 /* Pods-OCD Therapy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OCD Therapy.release.xcconfig"; sourceTree = "<group>"; };
+		86C4A2D817E6CFFF31BF75161625FD5D /* DynamicBlurView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DynamicBlurView.framework; path = DynamicBlurView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F1DEADE22685BAF573C1FE80F7BA9C3 /* Pods-OCD TherapyTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OCD TherapyTests-Info.plist"; sourceTree = "<group>"; };
+		9BAED71CD5CC6CFEE5AA8BA048A1CD06 /* Pods-OCD TherapyUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OCD TherapyUITests-dummy.m"; sourceTree = "<group>"; };
+		9BD928449EB8FA9DC1C7EB240BA8E4F1 /* PopupDialog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PopupDialog-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A357FF4D63957B79DD003814BBA4496C /* Pods-OCD Therapy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OCD Therapy-frameworks.sh"; sourceTree = "<group>"; };
+		A4EEDE59D287D5C562E7755AAA3B4553 /* InteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InteractiveTransition.swift; path = PopupDialog/Classes/InteractiveTransition.swift; sourceTree = "<group>"; };
+		A83740A70FF16E61C4E50A5CE8555804 /* PopupDialogOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogOverlayView.swift; path = PopupDialog/Classes/PopupDialogOverlayView.swift; sourceTree = "<group>"; };
+		AF090410A384ACFD3D028A86F6D8BAA4 /* DynamicBlurView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicBlurView-umbrella.h"; sourceTree = "<group>"; };
+		AFF8B4D127F70760C260BFFF6C763DFD /* PopupDialog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialog.swift; path = PopupDialog/Classes/PopupDialog.swift; sourceTree = "<group>"; };
+		B16839F4D08275FCF4F6343C27D24118 /* PopupDialog+Keyboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PopupDialog+Keyboard.swift"; path = "PopupDialog/Classes/PopupDialog+Keyboard.swift"; sourceTree = "<group>"; };
+		B22E5967B702A8AE58C05FB0A894A458 /* UIImage+Blur.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Blur.swift"; path = "DynamicBlurView/UIImage+Blur.swift"; sourceTree = "<group>"; };
+		B486EC9286DCEBD1DEE6D3B985940BC3 /* PopupDialog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopupDialog-umbrella.h"; sourceTree = "<group>"; };
+		B6249D0DEDE09097FCB7FFE25FCBD3B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B66D3FA8D17BA7AC64363C4CAAE5D0D0 /* PopupDialogButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogButton.swift; path = PopupDialog/Classes/PopupDialogButton.swift; sourceTree = "<group>"; };
+		B7E1B5DB84EA4788EB57A8EF76441014 /* PopupDialogDefaultViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultViewController.swift; path = PopupDialog/Classes/PopupDialogDefaultViewController.swift; sourceTree = "<group>"; };
+		B9D9669674F96FCA5913E7D076D64938 /* PopupDialogDefaultView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultView.swift; path = PopupDialog/Classes/PopupDialogDefaultView.swift; sourceTree = "<group>"; };
+		C37D8C067EACA1141EEFABB3B1E77CEF /* DynamicBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DynamicBlurView.h; path = DynamicBlurView/DynamicBlurView.h; sourceTree = "<group>"; };
+		C7A0B0BBBFF23D652476653E570E7FF9 /* TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimator.swift; path = PopupDialog/Classes/TransitionAnimator.swift; sourceTree = "<group>"; };
+		D8FA049DB0FBF26175B75CDB748A44F0 /* Pods_OCD_TherapyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OCD_TherapyUITests.framework; path = "Pods-OCD TherapyUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD5BC5C90BB0983EBC0368C635F126B /* Pods-OCD TherapyUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OCD TherapyUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E04474DF09B498D9F20B2AB74437905B /* Pods-OCD Therapy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OCD Therapy-dummy.m"; sourceTree = "<group>"; };
+		E63CC166EAFD00B1BF6AED7B9684933C /* Pods-OCD TherapyUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OCD TherapyUITests-Info.plist"; sourceTree = "<group>"; };
+		E6A0233AF228EF570291855F9CA83D30 /* UIImageView+Calculations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Calculations.swift"; path = "PopupDialog/Classes/UIImageView+Calculations.swift"; sourceTree = "<group>"; };
+		F10DDFEAD86D49701BBDF0CF6D60B73B /* Pods-OCD Therapy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OCD Therapy-acknowledgements.plist"; sourceTree = "<group>"; };
+		F3E9C234A224C8C10E731FF32F401B16 /* CaptureQuality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CaptureQuality.swift; path = DynamicBlurView/CaptureQuality.swift; sourceTree = "<group>"; };
+		FACC4DE8D29CF5880B34F9025283CB02 /* PresentationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationManager.swift; path = PopupDialog/Classes/PresentationManager.swift; sourceTree = "<group>"; };
+		FB5A054744D99BC330DCC109314C011B /* DynamicBlurView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicBlurView-prefix.pch"; sourceTree = "<group>"; };
+		FC1ABDBB555845A8E8A6CE4E7B0540E0 /* Pods-OCD TherapyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OCD TherapyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF0C3675DE05D755A19E4EADBC9F29D5 /* Pods-OCD TherapyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OCD TherapyTests.release.xcconfig"; sourceTree = "<group>"; };
+		FFC2974242D589A51C7FB5B2C78EE804 /* Pods-OCD TherapyTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OCD TherapyTests-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02E867BAF5885AAFC197C31BC6E42CF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2B49D1C5254C81DBE46B6BC9CE03CED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		289A70B8C9ED8F3FCD4A33A8235D8F8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C1E544BEBEEAC2A00D08696C69CC48A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74F47434089ED97AF48B711E9FADBF5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C6E460A6B911AFFD987F78AC59B7466 /* DynamicBlurView.framework in Frameworks */,
+				B18FE5EE478D75593AE4D0C6B1E6506F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A7FA426783FF2F1EE657354566042D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11F5BD2F4536CB1F8EBB66A773E09D80 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65CA3D384260DCB7B4E58EA234ABEA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B45F788C4CE05D2DC0686432FB0EE22 /* Accelerate.framework in Frameworks */,
+				DCEE2E72739ADFB7890C33BC35099C01 /* Foundation.framework in Frameworks */,
+				00620E71264E0E954D667CEAD6BD0E99 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04E899B2B7A4B76DB7BA2595204F952F /* Pods-OCD TherapyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				70363E4F3EDFC3BD9AEE292E18B0D6F8 /* Pods-OCD TherapyUITests.modulemap */,
+				3B0FE5AFBFC29420B0AAB6B28854AD43 /* Pods-OCD TherapyUITests-acknowledgements.markdown */,
+				DFD5BC5C90BB0983EBC0368C635F126B /* Pods-OCD TherapyUITests-acknowledgements.plist */,
+				9BAED71CD5CC6CFEE5AA8BA048A1CD06 /* Pods-OCD TherapyUITests-dummy.m */,
+				E63CC166EAFD00B1BF6AED7B9684933C /* Pods-OCD TherapyUITests-Info.plist */,
+				84802CAF19FCC45CB73AA7C00D6EC418 /* Pods-OCD TherapyUITests-umbrella.h */,
+				FC1ABDBB555845A8E8A6CE4E7B0540E0 /* Pods-OCD TherapyUITests.debug.xcconfig */,
+				732DC0DE2FBD9693FFC670B22254FEA2 /* Pods-OCD TherapyUITests.release.xcconfig */,
+			);
+			name = "Pods-OCD TherapyUITests";
+			path = "Target Support Files/Pods-OCD TherapyUITests";
+			sourceTree = "<group>";
+		};
+		231F431484E6D520EA289B3A8AE0FF70 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E99398DA6326ED538A70175B69A3A4D2 /* Pods-OCD Therapy */,
+				E3BC7A3A4A133562670798DB972E3237 /* Pods-OCD TherapyTests */,
+				04E899B2B7A4B76DB7BA2595204F952F /* Pods-OCD TherapyUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7F9D3681372E9E3EC2FE2A4BE7253AF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48605496EA7A8E9439C53C0835B30AC5 /* DynamicBlurView.framework */,
+				EF560866D2792929CF9E42DB507B41B6 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8406E532CE076205DE21969D2DBA94D1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E1B1EB73907A2D3AC61200CF4B93F70 /* PopupDialog.modulemap */,
+				2D2D2EF5519DC28B6D4E6A4462EF8183 /* PopupDialog.xcconfig */,
+				9BD928449EB8FA9DC1C7EB240BA8E4F1 /* PopupDialog-dummy.m */,
+				06E571BD03EACF0663EACED3C7F7CAA7 /* PopupDialog-Info.plist */,
+				6E4B67616545878191520F0AE99D8FFE /* PopupDialog-prefix.pch */,
+				B486EC9286DCEBD1DEE6D3B985940BC3 /* PopupDialog-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PopupDialog";
+			sourceTree = "<group>";
+		};
+		86D3D3322BF0092C0EE6716CD9B7324F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB5E243EA5327ADD9040213FA09CF3 /* DynamicBlurView */,
+				D9BE8FB2910FFBD77B78FE0E6B97B87E /* PopupDialog */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9B288CD264EFCCE286E2D0047D24742A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86C4A2D817E6CFFF31BF75161625FD5D /* DynamicBlurView.framework */,
+				5A381E5E7DB4C5C417A1B77F6571AE84 /* Pods_OCD_Therapy.framework */,
+				1C7099E3070E26088F21E0FD0DB831FC /* Pods_OCD_TherapyTests.framework */,
+				D8FA049DB0FBF26175B75CDB748A44F0 /* Pods_OCD_TherapyUITests.framework */,
+				34FB964502259D0FF233CE71CFDD2A71 /* PopupDialog.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				7F9D3681372E9E3EC2FE2A4BE7253AF1 /* Frameworks */,
+				86D3D3322BF0092C0EE6716CD9B7324F /* Pods */,
+				9B288CD264EFCCE286E2D0047D24742A /* Products */,
+				231F431484E6D520EA289B3A8AE0FF70 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D189501E3852CC34301CB783F21E339C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CF97EA4FC73C3CAC79A3997658D4D06 /* DynamicBlurView.modulemap */,
+				7BF64A6B2AE146DB55781FB2CF38B2E1 /* DynamicBlurView.xcconfig */,
+				32131236F091B22C918A5A7B899869AA /* DynamicBlurView-dummy.m */,
+				6AF6218FE29EC0269E22A359F4D0F0E9 /* DynamicBlurView-Info.plist */,
+				FB5A054744D99BC330DCC109314C011B /* DynamicBlurView-prefix.pch */,
+				AF090410A384ACFD3D028A86F6D8BAA4 /* DynamicBlurView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DynamicBlurView";
+			sourceTree = "<group>";
+		};
+		D9BE8FB2910FFBD77B78FE0E6B97B87E /* PopupDialog */ = {
+			isa = PBXGroup;
+			children = (
+				A4EEDE59D287D5C562E7755AAA3B4553 /* InteractiveTransition.swift */,
+				AFF8B4D127F70760C260BFFF6C763DFD /* PopupDialog.swift */,
+				B16839F4D08275FCF4F6343C27D24118 /* PopupDialog+Keyboard.swift */,
+				B66D3FA8D17BA7AC64363C4CAAE5D0D0 /* PopupDialogButton.swift */,
+				60A54A3C1068FA0E5B0D7B145236A46F /* PopupDialogContainerView.swift */,
+				0B20A19FAAE397396E3945C6EB516E98 /* PopupDialogDefaultButtons.swift */,
+				B9D9669674F96FCA5913E7D076D64938 /* PopupDialogDefaultView.swift */,
+				B7E1B5DB84EA4788EB57A8EF76441014 /* PopupDialogDefaultViewController.swift */,
+				A83740A70FF16E61C4E50A5CE8555804 /* PopupDialogOverlayView.swift */,
+				69F3D9F5A4D97765916C90C55E497A70 /* PresentationController.swift */,
+				FACC4DE8D29CF5880B34F9025283CB02 /* PresentationManager.swift */,
+				12F715F9CF622F444012A74A38DA41B5 /* TransitionAnimations.swift */,
+				C7A0B0BBBFF23D652476653E570E7FF9 /* TransitionAnimator.swift */,
+				E6A0233AF228EF570291855F9CA83D30 /* UIImageView+Calculations.swift */,
+				2B1114F602E2F726B78794ACB0768A42 /* UIView+Animations.swift */,
+				0EE2F1A1CFC969283C83EC30D201C24E /* UIViewController+Visibility.swift */,
+				8406E532CE076205DE21969D2DBA94D1 /* Support Files */,
+			);
+			name = PopupDialog;
+			path = PopupDialog;
+			sourceTree = "<group>";
+		};
+		E3BC7A3A4A133562670798DB972E3237 /* Pods-OCD TherapyTests */ = {
+			isa = PBXGroup;
+			children = (
+				356FD73BD23086201B263692AAE53C6B /* Pods-OCD TherapyTests.modulemap */,
+				473EF16596E5A0DB623147279319B087 /* Pods-OCD TherapyTests-acknowledgements.markdown */,
+				81BD352EB9CCA6A6848FF03007F60E61 /* Pods-OCD TherapyTests-acknowledgements.plist */,
+				37B3428ACA7F1F8E5634BFE548043C6D /* Pods-OCD TherapyTests-dummy.m */,
+				8F1DEADE22685BAF573C1FE80F7BA9C3 /* Pods-OCD TherapyTests-Info.plist */,
+				FFC2974242D589A51C7FB5B2C78EE804 /* Pods-OCD TherapyTests-umbrella.h */,
+				34CE16F2B33C2CEA5F373D46D06FBB79 /* Pods-OCD TherapyTests.debug.xcconfig */,
+				FF0C3675DE05D755A19E4EADBC9F29D5 /* Pods-OCD TherapyTests.release.xcconfig */,
+			);
+			name = "Pods-OCD TherapyTests";
+			path = "Target Support Files/Pods-OCD TherapyTests";
+			sourceTree = "<group>";
+		};
+		E99398DA6326ED538A70175B69A3A4D2 /* Pods-OCD Therapy */ = {
+			isa = PBXGroup;
+			children = (
+				3C114447E3F8F81F52B87254A64E4171 /* Pods-OCD Therapy.modulemap */,
+				4DA73D75612DC697539DC6BE8C4A9FE6 /* Pods-OCD Therapy-acknowledgements.markdown */,
+				F10DDFEAD86D49701BBDF0CF6D60B73B /* Pods-OCD Therapy-acknowledgements.plist */,
+				E04474DF09B498D9F20B2AB74437905B /* Pods-OCD Therapy-dummy.m */,
+				A357FF4D63957B79DD003814BBA4496C /* Pods-OCD Therapy-frameworks.sh */,
+				400527A853BD6FF87262549FAA42DD1E /* Pods-OCD Therapy-Info.plist */,
+				1A8F16D6741AE793973CBEF20A75F8C3 /* Pods-OCD Therapy-umbrella.h */,
+				7CE18716CD775779F74290A59F671954 /* Pods-OCD Therapy.debug.xcconfig */,
+				868AD97655B68063963EDAB5220791F2 /* Pods-OCD Therapy.release.xcconfig */,
+			);
+			name = "Pods-OCD Therapy";
+			path = "Target Support Files/Pods-OCD Therapy";
+			sourceTree = "<group>";
+		};
+		EF560866D2792929CF9E42DB507B41B6 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				698C7792749D8F8A29699C4E3B5CA919 /* Accelerate.framework */,
+				4C277DDAFE68A195EDF8E21573219773 /* Foundation.framework */,
+				B6249D0DEDE09097FCB7FFE25FCBD3B7 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FFDB5E243EA5327ADD9040213FA09CF3 /* DynamicBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				198453015ECD61507E6C90BEF20E2786 /* BlurLayer.swift */,
+				F3E9C234A224C8C10E731FF32F401B16 /* CaptureQuality.swift */,
+				51C947756D18FF60F2FB5440F6409F3B /* CGContext+CGImage.swift */,
+				08349774DC40603F5B53636C96B27E39 /* CGImage+Accelerate.swift */,
+				C37D8C067EACA1141EEFABB3B1E77CEF /* DynamicBlurView.h */,
+				232F03856A6A86BF9796C2F2527FD701 /* DynamicBlurView.swift */,
+				523EB0CD8923A05F0E44020A7A9DAABB /* TrackingMode.swift */,
+				B22E5967B702A8AE58C05FB0A894A458 /* UIImage+Blur.swift */,
+				D189501E3852CC34301CB783F21E339C /* Support Files */,
+			);
+			name = DynamicBlurView;
+			path = DynamicBlurView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0F3719369501B80B4ABA75A4F12C710D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3D077D4DAA3DB5AE89C18A7CEC7D189 /* Pods-OCD TherapyUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DAB3DF9D9C92572723CE26587D90D97 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADED01278E76134B063BCB7178FA4CC3 /* Pods-OCD TherapyTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87353A53FB8FA55F6215AC51654C8C0E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				928FFA6E7256231E743768EBC78E36A7 /* PopupDialog-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD91A0408709E5CE60C515237C69EEE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18643D4F9BC327B1E5B9175F4260AC0E /* DynamicBlurView-umbrella.h in Headers */,
+				08452A247B58228DFFC77D7BA30DD668 /* DynamicBlurView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA5FF7B0743C6881BC65E3BA7651776F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90C686FF7147C15B339B37DBE7685321 /* Pods-OCD Therapy-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		578B6DF45E161BFEB26CDB44E319F482 /* Pods-OCD TherapyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54461CE0C39FC1E6F5FC27440F2B0B03 /* Build configuration list for PBXNativeTarget "Pods-OCD TherapyUITests" */;
+			buildPhases = (
+				0F3719369501B80B4ABA75A4F12C710D /* Headers */,
+				04839ABF626F3669CEEFF9A145973766 /* Sources */,
+				289A70B8C9ED8F3FCD4A33A8235D8F8E /* Frameworks */,
+				7BD344372C2911AD4EBA58BDAA738EEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BE355D290E694961D99475901ED93EC /* PBXTargetDependency */,
+			);
+			name = "Pods-OCD TherapyUITests";
+			productName = "Pods-OCD TherapyUITests";
+			productReference = D8FA049DB0FBF26175B75CDB748A44F0 /* Pods_OCD_TherapyUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6E71929B582F8CD57B3DC1FD6560F047 /* PopupDialog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC7508D556E6C0879FE57E3E574C62AE /* Build configuration list for PBXNativeTarget "PopupDialog" */;
+			buildPhases = (
+				87353A53FB8FA55F6215AC51654C8C0E /* Headers */,
+				45888BA4605C36782FAFEAC2D00E6CD3 /* Sources */,
+				74F47434089ED97AF48B711E9FADBF5C /* Frameworks */,
+				51F44C6F0DFF3643706A346EC44D61E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A0F55816EC0A47F2B5F6C7CA549559A /* PBXTargetDependency */,
+			);
+			name = PopupDialog;
+			productName = PopupDialog;
+			productReference = 34FB964502259D0FF233CE71CFDD2A71 /* PopupDialog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7D914FA2F03C860D5133BA2DB87C594A /* DynamicBlurView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00E17D5B863CDCF74DE6FA3A6C1300F /* Build configuration list for PBXNativeTarget "DynamicBlurView" */;
+			buildPhases = (
+				BD91A0408709E5CE60C515237C69EEE0 /* Headers */,
+				64D4719150E9FEC3CDDBB82624177D73 /* Sources */,
+				E65CA3D384260DCB7B4E58EA234ABEA5 /* Frameworks */,
+				4991E03E196B947CF16368E88975E33C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicBlurView;
+			productName = DynamicBlurView;
+			productReference = 86C4A2D817E6CFFF31BF75161625FD5D /* DynamicBlurView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		845BEA0EC8DEE18DB000F91285D6803F /* Pods-OCD TherapyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B53981B887D6D917D86D29CE7477320C /* Build configuration list for PBXNativeTarget "Pods-OCD TherapyTests" */;
+			buildPhases = (
+				6DAB3DF9D9C92572723CE26587D90D97 /* Headers */,
+				1F3E59D8101995F181E45A229A6F581A /* Sources */,
+				02E867BAF5885AAFC197C31BC6E42CF7 /* Frameworks */,
+				74408D66A4AB52EEAE7240FD20F58D35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DA13F9C03BED8FE42363222800E59EC /* PBXTargetDependency */,
+			);
+			name = "Pods-OCD TherapyTests";
+			productName = "Pods-OCD TherapyTests";
+			productReference = 1C7099E3070E26088F21E0FD0DB831FC /* Pods_OCD_TherapyTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B38B6B339441B468552E2586F0DC2BAB /* Pods-OCD Therapy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1003E4D5817222396AFD76D862185042 /* Build configuration list for PBXNativeTarget "Pods-OCD Therapy" */;
+			buildPhases = (
+				DA5FF7B0743C6881BC65E3BA7651776F /* Headers */,
+				40BC5378092292BFCEE4ABADE98C9F99 /* Sources */,
+				9A7FA426783FF2F1EE657354566042D9 /* Frameworks */,
+				FE2E6F612711F7EFBDDB2B58FE63E553 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8922C4C112FD5A914451FBD264E15010 /* PBXTargetDependency */,
+				21AD8245A24C3F6FCD2BE2275CEE3122 /* PBXTargetDependency */,
+			);
+			name = "Pods-OCD Therapy";
+			productName = "Pods-OCD Therapy";
+			productReference = 5A381E5E7DB4C5C417A1B77F6571AE84 /* Pods_OCD_Therapy.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 9B288CD264EFCCE286E2D0047D24742A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D914FA2F03C860D5133BA2DB87C594A /* DynamicBlurView */,
+				B38B6B339441B468552E2586F0DC2BAB /* Pods-OCD Therapy */,
+				845BEA0EC8DEE18DB000F91285D6803F /* Pods-OCD TherapyTests */,
+				578B6DF45E161BFEB26CDB44E319F482 /* Pods-OCD TherapyUITests */,
+				6E71929B582F8CD57B3DC1FD6560F047 /* PopupDialog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4991E03E196B947CF16368E88975E33C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51F44C6F0DFF3643706A346EC44D61E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74408D66A4AB52EEAE7240FD20F58D35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD344372C2911AD4EBA58BDAA738EEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE2E6F612711F7EFBDDB2B58FE63E553 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04839ABF626F3669CEEFF9A145973766 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E578A344ECD97A6EC957AB3E82B3723D /* Pods-OCD TherapyUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F3E59D8101995F181E45A229A6F581A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA80828FA65308F59E88F8D1315E86E8 /* Pods-OCD TherapyTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40BC5378092292BFCEE4ABADE98C9F99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4034F92FF12081304D2D718CF7904FC3 /* Pods-OCD Therapy-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45888BA4605C36782FAFEAC2D00E6CD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC78D8A8141D8268D6382866CDF8F16A /* InteractiveTransition.swift in Sources */,
+				B2F489FB022F836FB35B3FEABF68903C /* PopupDialog+Keyboard.swift in Sources */,
+				73D0683E05F3565AE7175088B7CE6DC0 /* PopupDialog-dummy.m in Sources */,
+				5546955AFBE8D354D17380A294A25CE6 /* PopupDialog.swift in Sources */,
+				F82E29CC1BF7165FF77D9C4A387357A7 /* PopupDialogButton.swift in Sources */,
+				225555187BFD67F7F6DADEA6C73C567F /* PopupDialogContainerView.swift in Sources */,
+				A254857FE369E684CBE3B4F6F292239D /* PopupDialogDefaultButtons.swift in Sources */,
+				C9D87D93855954B4B23CDB647DEB7D0E /* PopupDialogDefaultView.swift in Sources */,
+				030FCBCF4FD8CD3905C39EDA654D29BD /* PopupDialogDefaultViewController.swift in Sources */,
+				A94100505467526DB734FAB115BF715C /* PopupDialogOverlayView.swift in Sources */,
+				D9F9E9336475EE7188F8F29DDE0A2EB1 /* PresentationController.swift in Sources */,
+				83B9E5412A63412A151E0092BF6AF7CA /* PresentationManager.swift in Sources */,
+				7A009CFEBD7D09FB5DA532F54EB9FBEF /* TransitionAnimations.swift in Sources */,
+				169D250E01A497F88370028FD950A37C /* TransitionAnimator.swift in Sources */,
+				0F82656B116745EE31DB985B8096CD60 /* UIImageView+Calculations.swift in Sources */,
+				37AFD441D3948E62ABBFFBDC662F6DB6 /* UIView+Animations.swift in Sources */,
+				D82DC5AAA5AA0E1A33EFE457C493D755 /* UIViewController+Visibility.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D4719150E9FEC3CDDBB82624177D73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD2F32642C7F57A4EE71C41F183FEAC8 /* BlurLayer.swift in Sources */,
+				B52BCD660C0CA96651CA9AEAB5672D7B /* CaptureQuality.swift in Sources */,
+				81156AE99DEF656F29B13B8176CDC3B5 /* CGContext+CGImage.swift in Sources */,
+				1C14E028D177632DF0B363082E85E536 /* CGImage+Accelerate.swift in Sources */,
+				7EBE128BBA4CC34DBF4853B1E747C724 /* DynamicBlurView-dummy.m in Sources */,
+				42414824559FA605DF0EDCD382366DBD /* DynamicBlurView.swift in Sources */,
+				C08A03032406A24E285B680ACE7A9E73 /* TrackingMode.swift in Sources */,
+				E9157FAB5F209124A32CE9C3BB6B6027 /* UIImage+Blur.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BE355D290E694961D99475901ED93EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-OCD Therapy";
+			target = B38B6B339441B468552E2586F0DC2BAB /* Pods-OCD Therapy */;
+			targetProxy = A5365386C18772090BD192FF18138811 /* PBXContainerItemProxy */;
+		};
+		21AD8245A24C3F6FCD2BE2275CEE3122 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PopupDialog;
+			target = 6E71929B582F8CD57B3DC1FD6560F047 /* PopupDialog */;
+			targetProxy = ABE905DCE3686B102A4CF6227D02004D /* PBXContainerItemProxy */;
+		};
+		7A0F55816EC0A47F2B5F6C7CA549559A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DynamicBlurView;
+			target = 7D914FA2F03C860D5133BA2DB87C594A /* DynamicBlurView */;
+			targetProxy = 2763FCA98104FEE93EB4E54D32DDF454 /* PBXContainerItemProxy */;
+		};
+		8922C4C112FD5A914451FBD264E15010 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DynamicBlurView;
+			target = 7D914FA2F03C860D5133BA2DB87C594A /* DynamicBlurView */;
+			targetProxy = F531C2EF30AF6FFCAACFE82D644B4487 /* PBXContainerItemProxy */;
+		};
+		8DA13F9C03BED8FE42363222800E59EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-OCD Therapy";
+			target = B38B6B339441B468552E2586F0DC2BAB /* Pods-OCD Therapy */;
+			targetProxy = 59425F53DA6CB86BF9F92F5C9BDB2014 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		007387143DF96735A6244DDAC76A6949 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BF64A6B2AE146DB55781FB2CF38B2E1 /* DynamicBlurView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DynamicBlurView/DynamicBlurView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DynamicBlurView/DynamicBlurView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DynamicBlurView/DynamicBlurView.modulemap";
+				PRODUCT_MODULE_NAME = DynamicBlurView;
+				PRODUCT_NAME = DynamicBlurView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		204B8AEA4AE90A551A1768B355C2F9F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		21D8F8A2A0BCB795179EBD7F168800E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF0C3675DE05D755A19E4EADBC9F29D5 /* Pods-OCD TherapyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OCD TherapyTests/Pods-OCD TherapyTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OCD TherapyTests/Pods-OCD TherapyTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		344DDAD5EFFA32EB713E5F3382ECD5DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D2D2EF5519DC28B6D4E6A4462EF8183 /* PopupDialog.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PopupDialog/PopupDialog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PopupDialog/PopupDialog-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PopupDialog/PopupDialog.modulemap";
+				PRODUCT_MODULE_NAME = PopupDialog;
+				PRODUCT_NAME = PopupDialog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3CCC6195EDBEE5DA2A49DF962113BE16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		4E371207552AAA5FE8FE734E897C6A91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC1ABDBB555845A8E8A6CE4E7B0540E0 /* Pods-OCD TherapyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OCD TherapyUITests/Pods-OCD TherapyUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OCD TherapyUITests/Pods-OCD TherapyUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		67505F85B6EC253480519EC1DC380913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE18716CD775779F74290A59F671954 /* Pods-OCD Therapy.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OCD Therapy/Pods-OCD Therapy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OCD Therapy/Pods-OCD Therapy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		97F7E8BC06D8D6C61508D449A8B4C966 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 868AD97655B68063963EDAB5220791F2 /* Pods-OCD Therapy.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OCD Therapy/Pods-OCD Therapy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OCD Therapy/Pods-OCD Therapy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B5E11A2CFD2C08CE67A4ABA22713F401 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D2D2EF5519DC28B6D4E6A4462EF8183 /* PopupDialog.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PopupDialog/PopupDialog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PopupDialog/PopupDialog-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PopupDialog/PopupDialog.modulemap";
+				PRODUCT_MODULE_NAME = PopupDialog;
+				PRODUCT_NAME = PopupDialog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B6EF9A163C2CD532D516CAEE2F0379D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 732DC0DE2FBD9693FFC670B22254FEA2 /* Pods-OCD TherapyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OCD TherapyUITests/Pods-OCD TherapyUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OCD TherapyUITests/Pods-OCD TherapyUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E9D799643CE4F0D6A79C48D8AC0E04AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BF64A6B2AE146DB55781FB2CF38B2E1 /* DynamicBlurView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DynamicBlurView/DynamicBlurView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DynamicBlurView/DynamicBlurView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DynamicBlurView/DynamicBlurView.modulemap";
+				PRODUCT_MODULE_NAME = DynamicBlurView;
+				PRODUCT_NAME = DynamicBlurView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F82A1977D3CCC7E5630855ECC0E8599F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34CE16F2B33C2CEA5F373D46D06FBB79 /* Pods-OCD TherapyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OCD TherapyTests/Pods-OCD TherapyTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OCD TherapyTests/Pods-OCD TherapyTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1003E4D5817222396AFD76D862185042 /* Build configuration list for PBXNativeTarget "Pods-OCD Therapy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67505F85B6EC253480519EC1DC380913 /* Debug */,
+				97F7E8BC06D8D6C61508D449A8B4C966 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				204B8AEA4AE90A551A1768B355C2F9F0 /* Debug */,
+				3CCC6195EDBEE5DA2A49DF962113BE16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54461CE0C39FC1E6F5FC27440F2B0B03 /* Build configuration list for PBXNativeTarget "Pods-OCD TherapyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E371207552AAA5FE8FE734E897C6A91 /* Debug */,
+				B6EF9A163C2CD532D516CAEE2F0379D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00E17D5B863CDCF74DE6FA3A6C1300F /* Build configuration list for PBXNativeTarget "DynamicBlurView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9D799643CE4F0D6A79C48D8AC0E04AA /* Debug */,
+				007387143DF96735A6244DDAC76A6949 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B53981B887D6D917D86D29CE7477320C /* Build configuration list for PBXNativeTarget "Pods-OCD TherapyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F82A1977D3CCC7E5630855ECC0E8599F /* Debug */,
+				21D8F8A2A0BCB795179EBD7F168800E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC7508D556E6C0879FE57E3E574C62AE /* Build configuration list for PBXNativeTarget "PopupDialog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E11A2CFD2C08CE67A4ABA22713F401 /* Debug */,
+				344DDAD5EFFA32EB713E5F3382ECD5DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

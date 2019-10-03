@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33859C3656EFD8D141348BE7 /* Pods_OCD_TherapyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6A7FBCE023ED8AAF7E13AA /* Pods_OCD_TherapyTests.framework */; };
 		8D844191230A27E200CB8508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D844190230A27E200CB8508 /* AppDelegate.swift */; };
 		8D844193230A27E200CB8508 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D844192230A27E200CB8508 /* ViewController.swift */; };
 		8D844196230A27E200CB8508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D844194230A27E200CB8508 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		8D84419E230A27E400CB8508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D84419C230A27E400CB8508 /* LaunchScreen.storyboard */; };
 		8D8441A9230A27E400CB8508 /* OCD_TherapyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8441A8230A27E400CB8508 /* OCD_TherapyTests.swift */; };
 		8D8441B4230A27E400CB8508 /* OCD_TherapyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8441B3230A27E400CB8508 /* OCD_TherapyUITests.swift */; };
+		A60A8AB94C3CE46DEDCC8B45 /* Pods_OCD_Therapy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725326EDA69D34F395202C04 /* Pods_OCD_Therapy.framework */; };
+		B26ED5E07E87A35B33F0C10B /* Pods_OCD_TherapyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D52688B8EFFDB252069545AB /* Pods_OCD_TherapyUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26234E23BD166557B7D04536 /* Pods-OCD Therapy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD Therapy.release.xcconfig"; path = "Target Support Files/Pods-OCD Therapy/Pods-OCD Therapy.release.xcconfig"; sourceTree = "<group>"; };
+		2E594CD18FC3EFA3DDD2346B /* Pods-OCD Therapy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD Therapy.debug.xcconfig"; path = "Target Support Files/Pods-OCD Therapy/Pods-OCD Therapy.debug.xcconfig"; sourceTree = "<group>"; };
+		6A6A7FBCE023ED8AAF7E13AA /* Pods_OCD_TherapyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCD_TherapyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		725326EDA69D34F395202C04 /* Pods_OCD_Therapy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCD_Therapy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D84418D230A27E200CB8508 /* OCD Therapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OCD Therapy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D844190230A27E200CB8508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D844192230A27E200CB8508 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +56,11 @@
 		8D8441AF230A27E400CB8508 /* OCD TherapyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OCD TherapyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8441B3230A27E400CB8508 /* OCD_TherapyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCD_TherapyUITests.swift; sourceTree = "<group>"; };
 		8D8441B5230A27E400CB8508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0EDCE8379977D93715C8219 /* Pods-OCD TherapyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD TherapyUITests.debug.xcconfig"; path = "Target Support Files/Pods-OCD TherapyUITests/Pods-OCD TherapyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A82A060828FFF9900DF69456 /* Pods-OCD TherapyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD TherapyTests.debug.xcconfig"; path = "Target Support Files/Pods-OCD TherapyTests/Pods-OCD TherapyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD5FCC071757C900C07BE2BB /* Pods-OCD TherapyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD TherapyTests.release.xcconfig"; path = "Target Support Files/Pods-OCD TherapyTests/Pods-OCD TherapyTests.release.xcconfig"; sourceTree = "<group>"; };
+		D52688B8EFFDB252069545AB /* Pods_OCD_TherapyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCD_TherapyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E579007B7BA834FC451B65EA /* Pods-OCD TherapyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD TherapyUITests.release.xcconfig"; path = "Target Support Files/Pods-OCD TherapyUITests/Pods-OCD TherapyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A60A8AB94C3CE46DEDCC8B45 /* Pods_OCD_Therapy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33859C3656EFD8D141348BE7 /* Pods_OCD_TherapyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B26ED5E07E87A35B33F0C10B /* Pods_OCD_TherapyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08E6A79ECF8F3A813F99E5A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				725326EDA69D34F395202C04 /* Pods_OCD_Therapy.framework */,
+				6A6A7FBCE023ED8AAF7E13AA /* Pods_OCD_TherapyTests.framework */,
+				D52688B8EFFDB252069545AB /* Pods_OCD_TherapyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61AC9058788624A3E8FCD49E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E594CD18FC3EFA3DDD2346B /* Pods-OCD Therapy.debug.xcconfig */,
+				26234E23BD166557B7D04536 /* Pods-OCD Therapy.release.xcconfig */,
+				A82A060828FFF9900DF69456 /* Pods-OCD TherapyTests.debug.xcconfig */,
+				CD5FCC071757C900C07BE2BB /* Pods-OCD TherapyTests.release.xcconfig */,
+				A0EDCE8379977D93715C8219 /* Pods-OCD TherapyUITests.debug.xcconfig */,
+				E579007B7BA834FC451B65EA /* Pods-OCD TherapyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8D844184230A27E200CB8508 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +122,8 @@
 				8D8441A7230A27E400CB8508 /* OCD TherapyTests */,
 				8D8441B2230A27E400CB8508 /* OCD TherapyUITests */,
 				8D84418E230A27E200CB8508 /* Products */,
+				61AC9058788624A3E8FCD49E /* Pods */,
+				08E6A79ECF8F3A813F99E5A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D8441B8230A27E400CB8508 /* Build configuration list for PBXNativeTarget "OCD Therapy" */;
 			buildPhases = (
+				45DDF604FD1F018551AB8D36 /* [CP] Check Pods Manifest.lock */,
 				8D844189230A27E200CB8508 /* Sources */,
 				8D84418A230A27E200CB8508 /* Frameworks */,
 				8D84418B230A27E200CB8508 /* Resources */,
+				0988E36361DA2B5D712BFA97 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D8441BB230A27E400CB8508 /* Build configuration list for PBXNativeTarget "OCD TherapyTests" */;
 			buildPhases = (
+				43609941E302FFEBB6324FB8 /* [CP] Check Pods Manifest.lock */,
 				8D8441A0230A27E400CB8508 /* Sources */,
 				8D8441A1230A27E400CB8508 /* Frameworks */,
 				8D8441A2230A27E400CB8508 /* Resources */,
@@ -170,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D8441BE230A27E400CB8508 /* Build configuration list for PBXNativeTarget "OCD TherapyUITests" */;
 			buildPhases = (
+				C8B83B708D5A74E6F4F47CF6 /* [CP] Check Pods Manifest.lock */,
 				8D8441AB230A27E400CB8508 /* Sources */,
 				8D8441AC230A27E400CB8508 /* Frameworks */,
 				8D8441AD230A27E400CB8508 /* Resources */,
@@ -253,6 +298,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0988E36361DA2B5D712BFA97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCD Therapy/Pods-OCD Therapy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCD Therapy/Pods-OCD Therapy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OCD Therapy/Pods-OCD Therapy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43609941E302FFEBB6324FB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCD TherapyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45DDF604FD1F018551AB8D36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCD Therapy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8B83B708D5A74E6F4F47CF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCD TherapyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D844189230A27E200CB8508 /* Sources */ = {
@@ -434,6 +565,7 @@
 		};
 		8D8441B9230A27E400CB8508 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E594CD18FC3EFA3DDD2346B /* Pods-OCD Therapy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +584,7 @@
 		};
 		8D8441BA230A27E400CB8508 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26234E23BD166557B7D04536 /* Pods-OCD Therapy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +603,7 @@
 		};
 		8D8441BC230A27E400CB8508 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A82A060828FFF9900DF69456 /* Pods-OCD TherapyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +625,7 @@
 		};
 		8D8441BD230A27E400CB8508 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD5FCC071757C900C07BE2BB /* Pods-OCD TherapyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +647,7 @@
 		};
 		8D8441BF230A27E400CB8508 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0EDCE8379977D93715C8219 /* Pods-OCD TherapyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +668,7 @@
 		};
 		8D8441C0230A27E400CB8508 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E579007B7BA834FC451B65EA /* Pods-OCD TherapyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -39,7 +39,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nio-Ry-rEl">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <connections>
-                                    <segue destination="hhE-sU-xK8" kind="showDetail" id="NSb-fN-C2T"/>
+                                    <segue destination="hhE-sU-xK8" kind="presentation" id="P1Y-Ke-uSa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,7 +74,7 @@
         <!--View Controller-->
         <scene sceneID="Mp8-Ui-fEL">
             <objects>
-                <viewController id="hhE-sU-xK8" sceneMemberID="viewController">
+                <viewController id="hhE-sU-xK8" customClass="ViewController" customModule="OCD_Therapy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0t4-zC-epq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,20 +95,25 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgg-3D-Hux">
-                                <rect key="frame" x="148" y="268" width="118" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgg-3D-Hux">
+                                <rect key="frame" x="148" y="269" width="118" height="30"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Add An Exposure">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="printButton:" destination="hhE-sU-xK8" eventType="touchUpInside" id="RzY-zQ-ZVW"/>
+                                    <action selector="printButton:" destination="jGQ-NW-ddP" eventType="touchUpInside" id="Vsm-FF-3uz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TuI-qe-4X6" firstAttribute="centerX" secondItem="0t4-zC-epq" secondAttribute="centerX" id="8nT-SK-lBr"/>
-                            <constraint firstItem="Mgg-3D-Hux" firstAttribute="centerX" secondItem="0t4-zC-epq" secondAttribute="centerX" id="DjU-rw-sFg"/>
+                            <constraint firstItem="Mgg-3D-Hux" firstAttribute="centerX" secondItem="0t4-zC-epq" secondAttribute="centerX" id="CfY-uT-RWW"/>
                             <constraint firstItem="TuI-qe-4X6" firstAttribute="centerY" secondItem="0t4-zC-epq" secondAttribute="centerY" id="G1E-qg-LfU"/>
                             <constraint firstItem="ILe-Uo-1Y2" firstAttribute="top" secondItem="dSM-4X-Sxn" secondAttribute="top" constant="62" id="Our-q5-N4l"/>
+                            <constraint firstItem="Mgg-3D-Hux" firstAttribute="top" secondItem="ILe-Uo-1Y2" secondAttribute="bottom" constant="87.5" id="mcv-Cy-5f3"/>
                             <constraint firstItem="ILe-Uo-1Y2" firstAttribute="centerX" secondItem="0t4-zC-epq" secondAttribute="centerX" id="uD2-7J-701"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dSM-4X-Sxn"/>
@@ -116,8 +121,9 @@
                     <navigationItem key="navigationItem" id="0pe-yD-EK3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWK-dr-Ici" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jGQ-NW-ddP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="830" y="134"/>
+            <point key="canvasLocation" x="828.98550724637687" y="133.92857142857142"/>
         </scene>
     </scenes>
     <resources>

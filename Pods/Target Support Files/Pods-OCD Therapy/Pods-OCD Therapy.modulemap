@@ -1,0 +1,6 @@
+framework module Pods_OCD_Therapy {
+  umbrella header "Pods-OCD Therapy-umbrella.h"
+
+  export *
+  module * { export * }
+}

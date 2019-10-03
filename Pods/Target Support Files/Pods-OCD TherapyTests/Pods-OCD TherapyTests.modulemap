@@ -1,0 +1,6 @@
+framework module Pods_OCD_TherapyTests {
+  umbrella header "Pods-OCD TherapyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
