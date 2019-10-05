@@ -218,7 +218,7 @@
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNJ-1l-R4J">
-                                <rect key="frame" x="172" y="353" width="73" height="38"/>
+                                <rect key="frame" x="171" y="402" width="73" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Sign Up">
@@ -232,6 +232,9 @@
                                 <rect key="frame" x="96" y="271" width="222" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailTextFieldEditEnded:" destination="FKk-SH-hxZ" eventType="editingDidEnd" id="Aix-Uv-Gci"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qsj-ku-obe">
                                 <rect key="frame" x="96" y="313" width="222" height="34"/>
@@ -242,6 +245,15 @@
                                 <rect key="frame" x="96" y="229" width="222" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z70-uG-U9R">
+                                <rect key="frame" x="96" y="355" width="222" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="confirmPasswordEditChanged:" destination="FKk-SH-hxZ" eventType="editingChanged" id="g1m-Cq-6Yx"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -265,6 +277,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Pya-49-vhL"/>
                     <connections>
+                        <outlet property="confirmPasswordTextField" destination="z70-uG-U9R" id="SGk-u1-yS1"/>
                         <outlet property="emailTextField" destination="xge-cS-2Aj" id="bY1-KB-YmX"/>
                         <outlet property="fullNameTextField" destination="op1-tJ-uYW" id="P14-EO-Abj"/>
                         <outlet property="passwordTextField" destination="Qsj-ku-obe" id="hnp-Lx-baN"/>

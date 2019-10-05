@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import PopupDialog
 
 class SignInViewController: UIViewController {
 
@@ -31,19 +32,28 @@ class SignInViewController: UIViewController {
     @IBAction func signInPressed(_ sender: Any) {
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if (!ParseUtility.verifyEmail(email: email)) {
-            // TODO: Prompt a proper email must be entered
+            emailTextField.layer.borderColor = UIColor.red.cgColor
+            emailTextField.layer.borderWidth = 1.0
             return
+        } else {
+            emailTextField.layer.borderColor = UIColor.lightGray.cgColor
+            emailTextField.layer.borderWidth = 0.25
         }
         
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if (!ParseUtility.verifyPassword(password: password)) {
-            // TODO: A proper password must be entered. Display requirements
+            passwordTextField.layer.borderColor = UIColor.red.cgColor
+            passwordTextField.layer.borderWidth = 1.0
             return
+        } else {
+            passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
+            passwordTextField.layer.borderWidth = 0.25
         }
         
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if (error != nil) {
-                // TODO: Handle error
+                ErrorHandle.handleError(error!, viewController: self as UIViewController)
+                return
             } else {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.homeViewController) as! HomeViewController
@@ -51,5 +61,4 @@ class SignInViewController: UIViewController {
             }
         }
     }
-    
 }

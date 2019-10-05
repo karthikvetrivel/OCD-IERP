@@ -15,10 +15,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -42,8 +42,8 @@ class SignUpViewController: UIViewController {
         }
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-            if let error = error {
-                print(error)
+            if error != nil {
+                ErrorHandle.handleError(error!, viewController: self as UIViewController)
             } else {
                 let dataBase = Firestore.firestore()
 
@@ -57,6 +57,30 @@ class SignUpViewController: UIViewController {
                 
                 self.homeScreen()
             }
+        }
+    }
+    
+    @IBAction func emailTextFieldEditEnded(_ sender: Any) {
+        let email = emailTextField.text!
+        if (!ParseUtility.verifyEmail(email: email) && !email.isEmpty) {
+            emailTextField.layer.borderColor = UIColor.red.cgColor
+            emailTextField.layer.borderWidth = 1.0
+        } else {
+            emailTextField.layer.borderColor = UIColor.lightGray.cgColor
+            emailTextField.layer.borderWidth = 0.25
+        }
+    }
+    
+    @IBAction func confirmPasswordEditChanged(_ sender: Any) {
+        let password = passwordTextField.text!
+        let confirmPassword = confirmPasswordTextField.text!
+        
+        if (password != confirmPassword) {
+            confirmPasswordTextField.layer.borderColor = UIColor.red.cgColor
+            confirmPasswordTextField.layer.borderWidth = 1.0
+        } else {
+            confirmPasswordTextField.layer.borderColor = UIColor.lightGray.cgColor
+            confirmPasswordTextField.layer.borderWidth = 0.25
         }
     }
     
