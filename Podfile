@@ -6,6 +6,8 @@ target 'OCD Therapy' do
   use_frameworks!
 
   # Pods for OCD Therapy
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
 
   target 'OCD TherapyTests' do
     inherit! :search_paths

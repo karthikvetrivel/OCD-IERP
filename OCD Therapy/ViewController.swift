@@ -8,9 +8,13 @@
 
 import UIKit
 import PopupDialog
+import FirebaseAuth
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -45,5 +49,28 @@ class ViewController: UIViewController {
         
         // Present dialog
         self.present(popup, animated: true, completion: nil)
+    }
+    
+    @IBAction func signUpPressed(_ sender: Any) {
+        // TODO: Make sure email and password fields are not empty
+        
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print(error)
+            }
+        }
+    }
+    
+    @IBAction func signInPressed(_ sender: Any) {
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
+          guard let strongSelf = self else { return }
+          // ...
+        }
     }
 }
