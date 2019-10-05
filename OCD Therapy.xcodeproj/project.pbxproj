@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		012EBE30A9B25FA75048D299 /* Pods_OCD_Therapy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF5092E074FCD4A26C374BD /* Pods_OCD_Therapy.framework */; };
-		3A8B0750234832E700F9F0A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B074F234832E700F9F0A7 /* GoogleService-Info.plist */; };
-		3A8B0751234832E700F9F0A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B074F234832E700F9F0A7 /* GoogleService-Info.plist */; };
-		3A8B0752234832E700F9F0A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B074F234832E700F9F0A7 /* GoogleService-Info.plist */; };
+		3A8DA7EA23484A5A00E1A138 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A8DA7E923484A5A00E1A138 /* GoogleService-Info.plist */; };
+		3A8DA7EE2348EFEE00E1A138 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8DA7EC2348EFEE00E1A138 /* ViewController.swift */; };
+		3A8DA7EF2348EFEE00E1A138 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8DA7ED2348EFEE00E1A138 /* AppDelegate.swift */; };
+		3A8DA7F72348F0A900E1A138 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8DA7F62348F0A900E1A138 /* SignInViewController.swift */; };
+		3A8DA7F92348F0C600E1A138 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8DA7F82348F0C600E1A138 /* SignUpViewController.swift */; };
+		3A8DA7FB2348F28300E1A138 /* ParseUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8DA7FA2348F28300E1A138 /* ParseUtility.swift */; };
+		3ABCF3922348F986004B5AD6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABCF3912348F986004B5AD6 /* HomeViewController.swift */; };
+		3ABCF3942348F9C1004B5AD6 /* NavigationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABCF3932348F9C1004B5AD6 /* NavigationConstants.swift */; };
 		6488E6C3DD4D6AF2A22DAB20 /* Pods_OCD_TherapyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B381710A1B022A82880C8777 /* Pods_OCD_TherapyUITests.framework */; };
 		66AADAC885EE66F49E6AFA5B /* Pods_OCD_TherapyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC35402A7EA29867244CB52 /* Pods_OCD_TherapyTests.framework */; };
-		8D844191230A27E200CB8508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D844190230A27E200CB8508 /* AppDelegate.swift */; };
-		8D844193230A27E200CB8508 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D844192230A27E200CB8508 /* ViewController.swift */; };
 		8D844196230A27E200CB8508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D844194230A27E200CB8508 /* Main.storyboard */; };
 		8D844199230A27E200CB8508 /* OCD_Therapy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D844197230A27E200CB8508 /* OCD_Therapy.xcdatamodeld */; };
 		8D84419B230A27E400CB8508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D84419A230A27E400CB8508 /* Assets.xcassets */; };
@@ -43,13 +46,18 @@
 /* Begin PBXFileReference section */
 		0A767EA21A6314FA886EC897 /* Pods-OCD TherapyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD TherapyTests.debug.xcconfig"; path = "Target Support Files/Pods-OCD TherapyTests/Pods-OCD TherapyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		19E46DAA140BA0A62D023C29 /* Pods-OCD Therapy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD Therapy.release.xcconfig"; path = "Target Support Files/Pods-OCD Therapy/Pods-OCD Therapy.release.xcconfig"; sourceTree = "<group>"; };
-		3A8B074F234832E700F9F0A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3A8DA7E923484A5A00E1A138 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3A8DA7EC2348EFEE00E1A138 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A8DA7ED2348EFEE00E1A138 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A8DA7F62348F0A900E1A138 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = "/Users/adrian/Desktop/OCD-IERP/OCD Therapy/Controller/SignInViewController.swift"; sourceTree = "<absolute>"; };
+		3A8DA7F82348F0C600E1A138 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3A8DA7FA2348F28300E1A138 /* ParseUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseUtility.swift; sourceTree = "<group>"; };
+		3ABCF3912348F986004B5AD6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3ABCF3932348F9C1004B5AD6 /* NavigationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConstants.swift; sourceTree = "<group>"; };
 		4316D4699957F5DA1F6C698E /* Pods-OCD TherapyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD TherapyTests.release.xcconfig"; path = "Target Support Files/Pods-OCD TherapyTests/Pods-OCD TherapyTests.release.xcconfig"; sourceTree = "<group>"; };
 		4D93F3B6781DCA9463518C57 /* Pods-OCD Therapy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD Therapy.debug.xcconfig"; path = "Target Support Files/Pods-OCD Therapy/Pods-OCD Therapy.debug.xcconfig"; sourceTree = "<group>"; };
 		6B0FBA0A80F834E61FBEAA8E /* Pods-OCD TherapyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD TherapyUITests.debug.xcconfig"; path = "Target Support Files/Pods-OCD TherapyUITests/Pods-OCD TherapyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D84418D230A27E200CB8508 /* OCD Therapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OCD Therapy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D844190230A27E200CB8508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D844192230A27E200CB8508 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8D844195230A27E200CB8508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D844198230A27E200CB8508 /* OCD_Therapy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OCD_Therapy.xcdatamodel; sourceTree = "<group>"; };
 		8D84419A230A27E400CB8508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +103,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A8DA7EB2348EFEE00E1A138 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3A8DA7F62348F0A900E1A138 /* SignInViewController.swift */,
+				3A8DA7EC2348EFEE00E1A138 /* ViewController.swift */,
+				3A8DA7ED2348EFEE00E1A138 /* AppDelegate.swift */,
+				3A8DA7F82348F0C600E1A138 /* SignUpViewController.swift */,
+				3ABCF3912348F986004B5AD6 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3A8DA7F02348EFF700E1A138 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A8DA7FA2348F28300E1A138 /* ParseUtility.swift */,
+				3ABCF3932348F9C1004B5AD6 /* NavigationConstants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A8DA7F12348EFFD00E1A138 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D84419C230A27E400CB8508 /* LaunchScreen.storyboard */,
+				8D844194230A27E200CB8508 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		51679048D585E47BD46B6DBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +159,6 @@
 		8D844184230A27E200CB8508 = {
 			isa = PBXGroup;
 			children = (
-				3A8B074F234832E700F9F0A7 /* GoogleService-Info.plist */,
 				8D84418F230A27E200CB8508 /* OCD Therapy */,
 				8D8441A7230A27E400CB8508 /* OCD TherapyTests */,
 				8D8441B2230A27E400CB8508 /* OCD TherapyUITests */,
@@ -144,11 +181,11 @@
 		8D84418F230A27E200CB8508 /* OCD Therapy */ = {
 			isa = PBXGroup;
 			children = (
-				8D844190230A27E200CB8508 /* AppDelegate.swift */,
-				8D844192230A27E200CB8508 /* ViewController.swift */,
-				8D844194230A27E200CB8508 /* Main.storyboard */,
+				3A8DA7F12348EFFD00E1A138 /* View */,
+				3A8DA7F02348EFF700E1A138 /* Model */,
+				3A8DA7EB2348EFEE00E1A138 /* Controller */,
+				3A8DA7E923484A5A00E1A138 /* GoogleService-Info.plist */,
 				8D84419A230A27E400CB8508 /* Assets.xcassets */,
-				8D84419C230A27E400CB8508 /* LaunchScreen.storyboard */,
 				8D84419F230A27E400CB8508 /* Info.plist */,
 				8D844197230A27E200CB8508 /* OCD_Therapy.xcdatamodeld */,
 			);
@@ -282,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D84419E230A27E400CB8508 /* LaunchScreen.storyboard in Resources */,
-				3A8B0750234832E700F9F0A7 /* GoogleService-Info.plist in Resources */,
+				3A8DA7EA23484A5A00E1A138 /* GoogleService-Info.plist in Resources */,
 				8D84419B230A27E400CB8508 /* Assets.xcassets in Resources */,
 				8D844196230A27E200CB8508 /* Main.storyboard in Resources */,
 			);
@@ -292,7 +329,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A8B0751234832E700F9F0A7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +336,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A8B0752234832E700F9F0A7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,9 +432,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8DA7FB2348F28300E1A138 /* ParseUtility.swift in Sources */,
+				3ABCF3942348F9C1004B5AD6 /* NavigationConstants.swift in Sources */,
+				3A8DA7F72348F0A900E1A138 /* SignInViewController.swift in Sources */,
+				3A8DA7EF2348EFEE00E1A138 /* AppDelegate.swift in Sources */,
+				3A8DA7EE2348EFEE00E1A138 /* ViewController.swift in Sources */,
 				8D844199230A27E200CB8508 /* OCD_Therapy.xcdatamodeld in Sources */,
-				8D844193230A27E200CB8508 /* ViewController.swift in Sources */,
-				8D844191230A27E200CB8508 /* AppDelegate.swift in Sources */,
+				3ABCF3922348F986004B5AD6 /* HomeViewController.swift in Sources */,
+				3A8DA7F92348F0C600E1A138 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

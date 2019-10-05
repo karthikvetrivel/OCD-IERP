@@ -8,6 +8,8 @@ target 'OCD Therapy' do
   # Pods for OCD Therapy
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
 
   target 'OCD TherapyTests' do
     inherit! :search_paths
