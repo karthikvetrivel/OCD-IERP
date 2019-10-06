@@ -7,12 +7,28 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if Auth.auth().currentUser != nil {
+            let db = Firestore.firestore()
+            let doc = db.collection("users").document(Auth.auth().currentUser!.uid)
+            doc.getDocument(source: .default) { (document, error) in
+                if let document = document {
+                    let dataDescription = document.data() ?? nil
+                    self.nameLabel.text = dataDescription!["email"] as? String
+                } else {
+                  print("Document does not exist in cache")
+                }
+
+            }
+        }
         // Do any additional setup after loading the view.
     }
     

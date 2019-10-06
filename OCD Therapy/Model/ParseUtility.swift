@@ -10,8 +10,8 @@ import Foundation
 
 class ParseUtility {
     static func verifyPassword(password: String) -> Bool {
-        // 8 characters minimum, one capital, one lowercase, one digit required
-        return password.range(of: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)\\S{8,}$", options: .regularExpression) != nil
+        // 6 characters minimum, one capital, one lowercase, one digit required
+        return password.range(of: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)\\S{6,}$", options: .regularExpression) != nil
     }
     
     static func verifyEmail(email: String) -> Bool {
