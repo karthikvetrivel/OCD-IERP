@@ -50,7 +50,7 @@
 		3A8DA7E923484A5A00E1A138 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A8DA7EC2348EFEE00E1A138 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A8DA7ED2348EFEE00E1A138 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A8DA7F62348F0A900E1A138 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = "/Users/adrian/Desktop/OCD-IERP/OCD Therapy/Controller/SignInViewController.swift"; sourceTree = "<absolute>"; };
+		3A8DA7F62348F0A900E1A138 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3A8DA7F82348F0C600E1A138 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3A8DA7FA2348F28300E1A138 /* ParseUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseUtility.swift; sourceTree = "<group>"; };
 		3ABCF3912348F986004B5AD6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
