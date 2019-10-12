@@ -21,7 +21,13 @@ class SignInViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
-
+        
+        emailTextField.addIcon(imageName: "email")
+        passwordTextField.addIcon(imageName: "lock")
+        
+        emailTextField.addShadow()
+        passwordTextField.addShadow()
+        
         // Do any additional setup after loading the view.
     }
     
