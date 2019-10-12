@@ -24,5 +24,7 @@ target 'OCD Therapy' do
   end
 
   pod 'PopupDialog', '~> 1.1'
+  pod "Gradients"
+pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
 end
