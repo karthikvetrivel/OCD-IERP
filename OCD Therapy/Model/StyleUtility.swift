@@ -14,22 +14,21 @@ class StyleUtility {
 }
 
 extension UITextField {
-    func addIcon(imageName : String, verticalMargin : Double = 9) {
+    func addIcon(imageName : String) {
         let imageView = UIImageView();
         let image = UIImage(named: imageName)
         imageView.image = image;
         imageView.setImageColor(color: UIColor.gray)
-        imageView.frame = CGRect(x: 13, y: verticalMargin, width: 20, height: 20)
+        imageView.frame = CGRect(x: 13, y: (self.frame.size.height - 20) / 2, width: 20, height: 20)
         self.addSubview(imageView)
         let leftView = UIView.init(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
         self.leftView = leftView;
         self.leftViewMode = UITextField.ViewMode.always
     }
     
-    func addShadow() {
-            //Basic texfield Setup
+    func roundBorder() {
+        //Basic texfield Setup
         self.borderStyle = .none
-        self.backgroundColor = UIColor.groupTableViewBackground // Use anycolor that give you a 2d look.
 
         //To apply corner radius
         self.layer.cornerRadius = self.frame.size.height / 2
@@ -37,13 +36,8 @@ extension UITextField {
         //To apply border
         self.layer.borderWidth = 0.25
         self.layer.borderColor = UIColor.white.cgColor
-
-        //To apply Shadow
-        self.layer.shadowOpacity = 0.4
-        self.layer.shadowRadius = 10.0
-        self.layer.shadowOffset = CGSize(width: 0, height: 5) // Use any CGSize
-        self.layer.shadowColor = UIColor.black.cgColor
     }
+
 }
 
 extension UIImageView {
@@ -51,5 +45,14 @@ extension UIImageView {
       let templateImage = self.image?.withRenderingMode(.alwaysTemplate)
       self.image = templateImage
       self.tintColor = color
+    }
+}
+
+extension UIView {
+    func addShadow(opacity : Float = 0.5, radius : CGFloat = 5.0, offset : CGSize = CGSize(width: 0, height: 0), color : CGColor = UIColor.black.cgColor) {
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowRadius = radius
+        self.layer.shadowOffset = offset
+        self.layer.shadowColor = color
     }
 }
