@@ -8,87 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OCD_Therapy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="aEu-b2-fG9">
-                                <rect key="frame" x="0.0" y="-12" width="414" height="920"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IERP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D94-M5-Kf7">
-                                <rect key="frame" x="138" y="410.5" width="138" height="75.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="63"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OCD Therapy Assistance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6S-5I-KDC">
-                                <rect key="frame" x="98" y="565" width="218.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nio-Ry-rEl">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrG-VC-340">
-                                <rect key="frame" x="203" y="498" width="73" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="FKk-SH-hxZ" kind="show" id="QgX-qD-owU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSZ-kG-Ezx">
-                                <rect key="frame" x="133" y="502" width="62" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="U0B-yy-njO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hhE-sU-xK8" kind="show" id="Ycb-vZ-dQ8"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="nSZ-kG-Ezx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="4bW-vN-wiB"/>
-                            <constraint firstItem="nio-Ry-rEl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="54r-Cc-Wl7"/>
-                            <constraint firstItem="QrG-VC-340" firstAttribute="leading" secondItem="nSZ-kG-Ezx" secondAttribute="trailing" constant="8" id="6Cd-5D-bh6"/>
-                            <constraint firstItem="nSZ-kG-Ezx" firstAttribute="baseline" secondItem="QrG-VC-340" secondAttribute="baseline" id="GsX-7J-jSf"/>
-                            <constraint firstItem="aEu-b2-fG9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hk8-C0-fZS"/>
-                            <constraint firstItem="nio-Ry-rEl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Isy-TX-vd3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nio-Ry-rEl" secondAttribute="trailing" id="Q5K-iw-Cod"/>
-                            <constraint firstItem="nio-Ry-rEl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RHl-Nx-XAr"/>
-                            <constraint firstItem="D94-M5-Kf7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UVr-2k-f9J"/>
-                            <constraint firstItem="D94-M5-Kf7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WVb-pY-zqz"/>
-                            <constraint firstItem="q6S-5I-KDC" firstAttribute="top" secondItem="QrG-VC-340" secondAttribute="bottom" constant="29" id="hzp-t5-iK9"/>
-                            <constraint firstItem="nio-Ry-rEl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jFm-CN-9AY"/>
-                            <constraint firstItem="aEu-b2-fG9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-12" id="l4E-3z-hoY"/>
-                            <constraint firstItem="aEu-b2-fG9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sZx-Or-1xI"/>
-                            <constraint firstItem="nio-Ry-rEl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sbT-Jv-96J"/>
-                            <constraint firstAttribute="bottom" secondItem="aEu-b2-fG9" secondAttribute="bottom" constant="-12" id="soX-0Q-G4A"/>
-                            <constraint firstItem="q6S-5I-KDC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vNn-89-77W"/>
-                            <constraint firstItem="nio-Ry-rEl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wEe-M3-xmH"/>
-                            <constraint firstAttribute="bottom" secondItem="nSZ-kG-Ezx" secondAttribute="bottom" constant="364" id="wvE-IM-8qa"/>
-                            <constraint firstItem="nio-Ry-rEl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ybL-kh-Imj"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="uaH-Ci-1gC"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1026.0869565217392" y="133.92857142857142"/>
-        </scene>
         <!--Sign In View Controller-->
         <scene sceneID="Mp8-Ui-fEL">
             <objects>
@@ -97,8 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="RfA-bi-DgS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="RfA-bi-DgS">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IERP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILe-Uo-1Y2">
                                 <rect key="frame" x="138.5" y="168" width="137.5" height="75.5"/>
@@ -132,6 +52,20 @@
                                     <action selector="signInPressed:" destination="hhE-sU-xK8" eventType="touchUpInside" id="Die-H8-yjd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OCD Therapy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8S-LM-NYJ">
+                                <rect key="frame" x="0.0" y="222" width="414" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In To Your Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIR-Gt-lAc">
+                                <rect key="frame" x="0.0" y="263" width="414" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -154,6 +88,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dSM-4X-Sxn"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tEu-ah-AS8"/>
                     <connections>
                         <outlet property="emailTextField" destination="JEy-l2-cH9" id="fTD-cs-xhC"/>
                         <outlet property="passwordTextField" destination="fnb-ow-qeH" id="RGm-Iq-zwy"/>
@@ -300,7 +235,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8L9-sl-blJ"/>
+                        <segue destination="hhE-sU-xK8" kind="relationship" relationship="rootViewController" id="HHt-Nz-BUZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78Y-hM-pPM" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import PopupDialog
 
+@available(iOS 13.0, *)
 class SignInViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: UITextField!
@@ -29,6 +30,18 @@ class SignInViewController: UIViewController {
         passwordTextField.addShadow()
         
         // Do any additional setup after loading the view.
+    }
+    
+    func addIconToTextField(textField : UITextField, imageName : String) {
+        let imageView = UIImageView();
+        var image = UIImage(named: imageName)!.withRenderingMode(.alwaysTemplate)
+        imageView.image = image;
+        imageView.frame = CGRect(x: 10, y: 6, width: 20, height: 20)
+        textField.addSubview(imageView)
+        let leftView = UIView.init(frame: CGRect(x: 10, y: 0, width: 30, height: 30))
+        textField.leftView = leftView;
+        textField.leftViewMode = UITextField.ViewMode.always
+        textField.leftView!.tintColor = UIColor.gray
     }
     
     override func viewWillDisappear(_ animated: Bool) {
