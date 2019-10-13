@@ -9,33 +9,28 @@
 import Foundation
 import UIKit
 
-class StyleUtility {
-    
-}
-
 extension UITextField {
     func addIcon(imageName : String) {
         let imageView = UIImageView();
         let image = UIImage(named: imageName)
+        
         imageView.image = image;
         imageView.setImageColor(color: UIColor.gray)
         imageView.frame = CGRect(x: 13, y: (self.frame.size.height - 20) / 2, width: 20, height: 20)
         self.addSubview(imageView)
+        
         let leftView = UIView.init(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
         self.leftView = leftView;
         self.leftViewMode = UITextField.ViewMode.always
     }
     
-    func roundBorder() {
+    func roundBorder(cornerRadius : CGFloat, borderWidth : CGFloat = 0.25, borderColor : CGColor = UIColor.white.cgColor) {
         //Basic texfield Setup
         self.borderStyle = .none
-
-        //To apply corner radius
-        self.layer.cornerRadius = self.frame.size.height / 2
-
-        //To apply border
-        self.layer.borderWidth = 0.25
-        self.layer.borderColor = UIColor.white.cgColor
+        
+        self.layer.cornerRadius = cornerRadius
+        self.layer.borderWidth = borderWidth
+        self.layer.borderColor = borderColor
     }
 
 }

@@ -30,15 +30,17 @@ class SignUpViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         
+        //MARK: Initialize Aesthetics
+        
         fullNameTextField.backgroundColor = .white
         emailTextField.backgroundColor = .white
         passwordTextField.backgroundColor = .white
         confirmPasswordTextField.backgroundColor = .white
         
-        fullNameTextField.roundBorder()
-        emailTextField.roundBorder()
-        passwordTextField.roundBorder()
-        confirmPasswordTextField.roundBorder()
+        fullNameTextField.roundBorder(cornerRadius: fullNameTextField.frame.size.height / 2)
+        emailTextField.roundBorder(cornerRadius: emailTextField.frame.size.height / 2)
+        passwordTextField.roundBorder(cornerRadius: passwordTextField.frame.size.height / 2)
+        confirmPasswordTextField.roundBorder(cornerRadius: confirmPasswordTextField.frame.size.height / 2)
         
         fullNameTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
         emailTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
@@ -73,6 +75,7 @@ class SignUpViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK: Sign Up
     @IBAction func signUpUIButtonPressed(_ sender: Any) {
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if (!ParseUtility.verifyEmail(email: email)) {
@@ -111,6 +114,13 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    func homeScreen() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.homeViewController) as! HomeViewController
+        self.present(nextViewController, animated:true, completion:nil)
+    }
+    
+    // MARK: Verify Input
     @IBAction func emailTextFieldEditEnded(_ sender: Any) {
         let email = emailTextField.text!
         if (!ParseUtility.verifyEmail(email: email) && !email.isEmpty) {
@@ -133,11 +143,5 @@ class SignUpViewController: UIViewController {
             confirmPasswordTextField.layer.borderColor = UIColor.lightGray.cgColor
             confirmPasswordTextField.layer.borderWidth = 0.25
         }
-    }
-    
-    func homeScreen() {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.homeViewController) as! HomeViewController
-        self.present(nextViewController, animated:true, completion:nil)
     }
 }

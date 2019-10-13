@@ -19,6 +19,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // MARK: Aesthetics Initialization
         let backgroundTop = UIColor(hexString: "#ff9a9e")!
         let backgroundBottom = UIColor(hexString: "fad0c4")!
         
@@ -30,14 +31,15 @@ class SignInViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         
+        // Initialize aesthetic changes
         emailTextField.backgroundColor = .white
         passwordTextField.backgroundColor = .white
         
         emailTextField.addIcon(imageName: "email")
         passwordTextField.addIcon(imageName: "lock")
         
-        emailTextField.roundBorder()
-        passwordTextField.roundBorder()
+        emailTextField.roundBorder(cornerRadius: emailTextField.frame.size.height / 2)
+        passwordTextField.roundBorder(cornerRadius: passwordTextField.frame.size.height / 2)
         
         emailTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
         passwordTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
@@ -48,8 +50,10 @@ class SignInViewController: UIViewController {
         
         signInUIButton.addShadow(opacity: 0.7, radius: 5.0, offset: CGSize(width: 0, height: 5.0), color: UIColor(red:0.89, green:0.33, blue:0.42, alpha:1.0).cgColor)
         
+        // Underline and make the string red
         let createAccountAttributes: [NSAttributedString.Key : Any] = [ NSAttributedString.Key.foregroundColor: UIColor(red:0.89, green:0.33, blue:0.42, alpha:1.0), NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue ]
         let accountCreateString = NSMutableAttributedString(string: "Don't Have An Account? ")
+        
         accountCreateString.append(NSAttributedString(string: "Create One", attributes: createAccountAttributes))
 
         // set attributed text on a UILabel
@@ -63,19 +67,8 @@ class SignInViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    // MARK: Sign In
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    
-    
     @IBAction func signInPressed(_ sender: Any) {
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if (!ParseUtility.verifyEmail(email: email)) {
