@@ -8,8 +8,8 @@
 import UIKit
 import FirebaseAuth
 import PopupDialog
+import ChameleonFramework
 
-@available(iOS 13.0, *)
 class SignInViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: UITextField!
@@ -18,6 +18,11 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var createAccountUIButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let backgroundTop = UIColor(hexString: "#ff9a9e")!
+        let backgroundBottom = UIColor(hexString: "fad0c4")!
+        
+        self.view.backgroundColor = UIColor(gradientStyle:UIGradientStyle.topToBottom, withFrame:self.view.frame, andColors:[backgroundTop, backgroundBottom])
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -34,12 +39,12 @@ class SignInViewController: UIViewController {
         emailTextField.roundBorder()
         passwordTextField.roundBorder()
         
-        emailTextField.addShadow(radius: 7.0, offset: CGSize(width: 0, height: 6.0))
-        passwordTextField.addShadow(radius: 7.0, offset: CGSize(width: 0, height: 6.0))
+        emailTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
+        passwordTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
         
         signInUIButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15)
         signInUIButton.backgroundColor = UIColor(red:0.89, green:0.33, blue:0.42, alpha:1.0)
-        signInUIButton.layer.cornerRadius = 5
+        signInUIButton.layer.cornerRadius = 10
         
         signInUIButton.addShadow(opacity: 0.7, radius: 5.0, offset: CGSize(width: 0, height: 5.0), color: UIColor(red:0.89, green:0.33, blue:0.42, alpha:1.0).cgColor)
         

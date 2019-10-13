@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
                     let dataDescription = document.data() ?? nil
                     var userString : String = dataDescription!["name"] as? String ?? "test"
                     userString = userString.components(separatedBy: " ").first!
-                    self.nameLabel.text  = "Welcome back " + userString ?? "user" + "!"
+                    self.nameLabel.text  = "Welcome back " + (userString ?? "user") + "!"
                 } else {
                   print("Document does not exist in cache")
                 }
