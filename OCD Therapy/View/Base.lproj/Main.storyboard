@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DUM-RD-a5c">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
-=======
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
->>>>>>> 0eb44f243b2f84a8d23fc72abaaeb87c4bb18fc3
+
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
@@ -246,7 +246,7 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-<<<<<<< HEAD
+
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNJ-1l-R4J">
                                 <rect key="frame" x="171" y="402" width="73" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -260,20 +260,20 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xge-cS-2Aj">
                                 <rect key="frame" x="96" y="271" width="222" height="30"/>
-=======
+
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xge-cS-2Aj">
                                 <rect key="frame" x="48" y="232" width="318" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="L2s-hR-vma"/>
                                 </constraints>
->>>>>>> 0eb44f243b2f84a8d23fc72abaaeb87c4bb18fc3
+
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="emailTextFieldEditEnded:" destination="FKk-SH-hxZ" eventType="editingDidEnd" id="Aix-Uv-Gci"/>
                                 </connections>
                             </textField>
-<<<<<<< HEAD
+
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qsj-ku-obe">
                                 <rect key="frame" x="96" y="309" width="222" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -281,7 +281,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="op1-tJ-uYW">
                                 <rect key="frame" x="96" y="233" width="222" height="30"/>
-=======
+
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qsj-ku-obe">
                                 <rect key="frame" x="48" y="280" width="318" height="40"/>
                                 <constraints>
@@ -295,7 +295,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ofL-pc-bMa"/>
                                 </constraints>
->>>>>>> 0eb44f243b2f84a8d23fc72abaaeb87c4bb18fc3
+
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
