@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hhE-sU-xK8">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DUM-RD-a5c">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -129,18 +131,95 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="Mml-lp-GDW">
+                                <rect key="frame" x="122" y="249.5" width="170" height="446"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWB-Sg-oca">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="GJp-gW-CdG"/>
+                                            <constraint firstAttribute="height" constant="50" id="bsN-pb-je2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Add An Exposure">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJ1-yt-HrO">
+                                        <rect key="frame" x="0.0" y="99" width="170" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="1bf-ca-5Ze"/>
+                                            <constraint firstAttribute="height" constant="50" id="MFe-i4-nls"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Practice IERP">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4U-Gh-yLi">
+                                        <rect key="frame" x="0.0" y="198" width="170" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="5dR-Yb-iwR"/>
+                                            <constraint firstAttribute="width" constant="170" id="ndQ-Sd-N0u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Obsessing Now">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uit-yc-3eJ">
+                                        <rect key="frame" x="0.0" y="297" width="170" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="Pmd-Be-BMh"/>
+                                            <constraint firstAttribute="height" constant="50" id="t9p-zf-bbf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Track Your Progress ">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5G-7e-LIj">
+                                        <rect key="frame" x="0.0" y="396" width="170" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="NK1-my-gHC"/>
+                                            <constraint firstAttribute="height" constant="50" id="OXp-zr-XWx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.4798813475" green="0.40659632849999999" blue="0.81817100249999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="Mml-lp-GDW" firstAttribute="centerX" secondItem="xl6-bO-LSd" secondAttribute="centerX" id="309-RB-DF4"/>
                             <constraint firstItem="rm5-nG-1QK" firstAttribute="top" secondItem="Lqg-lP-TgB" secondAttribute="top" constant="15" id="9tB-L2-nm3"/>
                             <constraint firstItem="2cB-8M-ZiW" firstAttribute="top" secondItem="Lqg-lP-TgB" secondAttribute="top" constant="80" id="AHR-oE-Fkl"/>
                             <constraint firstItem="Lqg-lP-TgB" firstAttribute="trailing" secondItem="rm5-nG-1QK" secondAttribute="trailing" constant="30" id="Ypd-3c-ekH"/>
+                            <constraint firstItem="Mml-lp-GDW" firstAttribute="top" secondItem="2cB-8M-ZiW" secondAttribute="bottom" constant="50" id="djR-oX-2Uk"/>
                             <constraint firstItem="2cB-8M-ZiW" firstAttribute="centerX" secondItem="xl6-bO-LSd" secondAttribute="centerX" id="hGo-3I-iKZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lqg-lP-TgB"/>
                     </view>
                     <connections>
+                        <outlet property="exposureButton" destination="HWB-Sg-oca" id="lFQ-dU-HUf"/>
                         <outlet property="nameLabel" destination="rm5-nG-1QK" id="Vcd-sf-eSx"/>
+                        <outlet property="obsessButton" destination="z4U-Gh-yLi" id="ld1-Dj-7kL"/>
+                        <outlet property="practiceIERPButton" destination="eJ1-yt-HrO" id="uNl-iP-Ugm"/>
+                        <outlet property="settingButton" destination="U5G-7e-LIj" id="jg4-GH-cCQ"/>
+                        <outlet property="trackProgressButton" destination="Uit-yc-3eJ" id="mKw-K3-YNl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abe-w9-4zl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -176,7 +255,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xge-cS-2Aj">
-                                <rect key="frame" x="96" y="271" width="222" height="34"/>
+                                <rect key="frame" x="96" y="271" width="222" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -184,12 +263,12 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qsj-ku-obe">
-                                <rect key="frame" x="96" y="313" width="222" height="34"/>
+                                <rect key="frame" x="96" y="309" width="222" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="op1-tJ-uYW">
-                                <rect key="frame" x="96" y="229" width="222" height="34"/>
+                                <rect key="frame" x="96" y="233" width="222" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>

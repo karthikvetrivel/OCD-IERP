@@ -56,3 +56,11 @@ extension UIView {
         self.layer.shadowColor = color
     }
 }
+
+extension UIButton {
+    func roundBorder() {
+        //To apply corner radius
+        self.layer.cornerRadius = self.frame.size.height / 2
+        
+    }
+}
