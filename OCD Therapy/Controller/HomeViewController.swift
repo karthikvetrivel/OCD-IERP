@@ -12,7 +12,6 @@ import FirebaseAuth
 import FirebaseFirestore
 import ChameleonFramework
 
-
 class HomeViewController: UIViewController {
 
     
@@ -37,7 +36,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        
+
         
         cacheAuthorization();
         setBackground();
@@ -58,23 +57,24 @@ class HomeViewController: UIViewController {
     
     
     func cacheAuthorization() {
-        
+
         if Auth.auth().currentUser != nil {
             let db = Firestore.firestore()
             let doc = db.collection("users").document(Auth.auth().currentUser!.uid)
             doc.getDocument(source: .default) { (document, error) in
                 if let document = document {
                     let dataDescription = document.data() ?? nil
-                    var userString : String = dataDescription!["name"] as? String ?? "test"
+                    var userString : String = dataDescription!["name"] as? String ?? "user"
                     userString = userString.components(separatedBy: " ").first!
-                    self.nameLabel.text  = "Welcome back " + userString ?? "user" + "!"
+                    self.nameLabel.text  = "Welcome back " + userString + "!"
                 } else {
                     print("Document does not exist in cache")
                 }
-                
+
             }
         }
     }
+
     
     func setBackground() {
         self.view.backgroundColor = UIColor(gradientStyle:UIGradientStyle.topToBottom, withFrame:self.view.frame, andColors:[backgroundTop, backgroundBottom])

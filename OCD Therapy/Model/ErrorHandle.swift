@@ -31,7 +31,7 @@ extension AuthErrorCode {
         case .emailAlreadyInUse:
             return "The email is already in use with another account"
         case .userNotFound:
-            return "Account not found for the specified user. Please check and try again"
+            return "Account not found for the specified user. Please check the fields and try again"
         case .userDisabled:
             return "Your account has been disabled. Please contact support."
         case .invalidEmail, .invalidSender, .invalidRecipientEmail:

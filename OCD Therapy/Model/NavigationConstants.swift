@@ -11,5 +11,7 @@ import Foundation
 class NavigationConstants {
     struct Storyboard {
         static let homeViewController = "HomeViewController"
+        static let signInViewController = "SignInViewController"
+        static let signUpViewController = "SignUpViewController"
     }
 }
