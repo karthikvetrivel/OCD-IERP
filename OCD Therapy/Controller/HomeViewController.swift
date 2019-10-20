@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
 
     
     // Primary Variable Declaration:
+    @IBOutlet weak var collectionView: UICollectionView!
     
     // Background Constants
     let backgroundTop = UIColor(hexString: "#ff9a9e")!
@@ -35,26 +36,17 @@ class HomeViewController: UIViewController {
     //--------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        collectionView.backgroundColor = UIColor.clear
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.delegate = self
+        collectionView.dataSource = self
 
         
-        cacheAuthorization();
-        setBackground();
-        styleMainButtons()
-        // Do any additional setup after loading the view.
+        cacheAuthorization()
+        setBackground()
+        // Sorry bub
+//        styleMainButtons()
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     
     func cacheAuthorization() {
 
@@ -88,4 +80,43 @@ class HomeViewController: UIViewController {
         settingButton.layer.cornerRadius = 10
     }
   
+}
+
+extension UIViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // The number of items
+        return 10;
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // Take up full space
+        return CGSize(width: collectionView.bounds.size.width - 100, height: collectionView.bounds.size.height)
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        let totalCellWidth = (collectionView.bounds.size.width - 100) * 10
+//        let totalSpacingWidth = CGFloat(100 * (10 - 1))
+//
+//        let leftInset = (collectionView.bounds.size.width - totalCellWidth + totalSpacingWidth) / 2
+//        let rightInset = leftInset
+
+        return UIEdgeInsets(top: 0, left: (collectionView.bounds.size.width - 100) / 2 - 105, bottom: 0, right: 100 * 10 - (collectionView.bounds.size.width - 100) / 2 + 20)
+    }
+
+    public func collectionView(_ collectionView: UICollectionView, layout
+        collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 100
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "identifier", for: indexPath) as! HomeUICollectionViewCell
+
+        cell.label.text = String(indexPath.row + 1)
+        cell.backgroundColor = .clear
+        cell.view.backgroundColor = .white
+        cell.view.roundBorder(cornerRadius: 25)
+        cell.view.addShadow()
+        return cell
+    }
 }

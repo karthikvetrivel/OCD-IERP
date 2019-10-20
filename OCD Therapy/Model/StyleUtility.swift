@@ -50,6 +50,11 @@ extension UIView {
         self.layer.shadowOffset = offset
         self.layer.shadowColor = color
     }
+    
+    func roundBorder(cornerRadius : CGFloat, borderWidth : CGFloat = 0.25) {
+        self.layer.cornerRadius = cornerRadius
+        self.layer.borderWidth = borderWidth
+    }
 }
 
 extension UIButton {
