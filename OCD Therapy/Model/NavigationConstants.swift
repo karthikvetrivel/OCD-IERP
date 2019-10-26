@@ -13,5 +13,6 @@ class NavigationConstants {
         static let homeViewController = "HomeViewController"
         static let signInViewController = "SignInViewController"
         static let signUpViewController = "SignUpViewController"
+        static let tabBarController = "TabBarController"
     }
 }

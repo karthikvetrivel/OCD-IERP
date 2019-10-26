@@ -32,20 +32,15 @@ class HomeViewController: UIViewController {
     
     // Name Label --------------
     @IBOutlet weak var nameLabel: UILabel!
-    
+
+    @IBOutlet weak var dashboardBarItem: UITabBarItem!
     //--------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = UIColor.clear
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.delegate = self
-        collectionView.dataSource = self
-
-        
         cacheAuthorization()
         setBackground()
-        // Sorry bub
-//        styleMainButtons()
+        styleBarItem()
+        
     }
     
     func cacheAuthorization() {
@@ -71,52 +66,22 @@ class HomeViewController: UIViewController {
     func setBackground() {
         self.view.backgroundColor = UIColor(gradientStyle:UIGradientStyle.topToBottom, withFrame:self.view.frame, andColors:[backgroundTop, backgroundBottom])
     }
+
     
-    func styleMainButtons() {
-        exposureButton.layer.cornerRadius = 10
-        practiceIERPButton.layer.cornerRadius = 10
-        obsessButton.layer.cornerRadius = 10
-        trackProgressButton.layer.cornerRadius = 10
-        settingButton.layer.cornerRadius = 10
+    func styleBarItem() {
+        let appearance = UITabBarItem.appearance()
+        let attributes: [NSAttributedString.Key: AnyObject] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue):UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular), NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.gray]
+        appearance.setTitleTextAttributes(attributes, for: .normal)
+        
+        
+    
     }
+    
+    
+    
+    
+    
   
 }
 
-extension UIViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // The number of items
-        return 10;
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // Take up full space
-        return CGSize(width: collectionView.bounds.size.width - 100, height: collectionView.bounds.size.height)
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        let totalCellWidth = (collectionView.bounds.size.width - 100) * 10
-//        let totalSpacingWidth = CGFloat(100 * (10 - 1))
-//
-//        let leftInset = (collectionView.bounds.size.width - totalCellWidth + totalSpacingWidth) / 2
-//        let rightInset = leftInset
 
-        return UIEdgeInsets(top: 0, left: (collectionView.bounds.size.width - 100) / 2 - 105, bottom: 0, right: 100 * 10 - (collectionView.bounds.size.width - 100) / 2 + 20)
-    }
-
-    public func collectionView(_ collectionView: UICollectionView, layout
-        collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 100
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "identifier", for: indexPath) as! HomeUICollectionViewCell
-
-        cell.label.text = String(indexPath.row + 1)
-        cell.backgroundColor = .clear
-        cell.view.backgroundColor = .white
-        cell.view.roundBorder(cornerRadius: 25)
-        cell.view.addShadow()
-        return cell
-    }
-}
