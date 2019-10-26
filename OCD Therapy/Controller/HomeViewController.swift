@@ -21,19 +21,12 @@ class HomeViewController: UIViewController {
     // Background Constants
     let backgroundTop = UIColor(hexString: "#ff9a9e")!
     let backgroundBottom = UIColor(hexString: "fad0c4")!
-    
-    // Button Constants -----------
-    @IBOutlet weak var exposureButton: UIButton!
-    @IBOutlet weak var practiceIERPButton: UIButton!
-    @IBOutlet weak var obsessButton: UIButton!
-    @IBOutlet weak var trackProgressButton: UIButton!
-    @IBOutlet weak var settingButton: UIButton!
-    
-    
+
     // Name Label --------------
     @IBOutlet weak var nameLabel: UILabel!
 
     @IBOutlet weak var dashboardBarItem: UITabBarItem!
+    
     //--------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,12 +62,13 @@ class HomeViewController: UIViewController {
 
     
     func styleBarItem() {
-        let appearance = UITabBarItem.appearance()
-        let attributes: [NSAttributedString.Key: AnyObject] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue):UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular), NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.gray]
-        appearance.setTitleTextAttributes(attributes, for: .normal)
+//        let appearance = UITabBarItem.appearance()
+//        let attributes: [NSAttributedString.Key: AnyObject] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue):UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular) NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.gray]
+//        appearance.setTitleTextAttributes(attribute_set, for: .normal)
         
-        
-    
+        dashboardBarItem.image = UIImage(named: "icons8-home-50")
+
+       
     }
     
     

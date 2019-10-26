@@ -12,12 +12,18 @@ import FirebaseAuth
 import FirebaseFirestore
 import ChameleonFramework
 
+
 class TabBarController: UITabBarController {
     
+    @IBOutlet weak var homeTabBar: UITabBar!
     
    
     override func viewDidLoad() {
-    
+        homeTabBar.barTintColor = UIColor.white;
+        
+        self.homeTabBar.tintColor = UIColor.darkGray;
+        
+     
     }
 }
 

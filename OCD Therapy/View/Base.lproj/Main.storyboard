@@ -116,7 +116,7 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="DUM-RD-a5c" customClass="HomeViewController" customModule="OCD_Therapy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xl6-bO-LSd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rm5-nG-1QK">
@@ -126,31 +126,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IERP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cB-8M-ZiW">
-                                <rect key="frame" x="138.5" y="124" width="137.5" height="75.5"/>
+                                <rect key="frame" x="138.5" y="129" width="137.5" height="75.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="63"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9b-ZH-qc3">
-                                <rect key="frame" x="112.5" y="222" width="189" height="45"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.4798813475" green="0.40659632849999999" blue="0.81817100249999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="g9b-ZH-qc3" firstAttribute="top" secondItem="2cB-8M-ZiW" secondAttribute="bottom" constant="22.5" id="7KI-Bp-QWw"/>
                             <constraint firstItem="rm5-nG-1QK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lqg-lP-TgB" secondAttribute="leading" symbolic="YES" id="9t4-TZ-wXZ"/>
                             <constraint firstItem="rm5-nG-1QK" firstAttribute="top" secondItem="Lqg-lP-TgB" secondAttribute="top" constant="30" id="9tB-L2-nm3"/>
-                            <constraint firstItem="2cB-8M-ZiW" firstAttribute="top" secondItem="Lqg-lP-TgB" secondAttribute="top" constant="80" id="AHR-oE-Fkl"/>
+                            <constraint firstItem="2cB-8M-ZiW" firstAttribute="top" secondItem="Lqg-lP-TgB" secondAttribute="top" constant="85" id="AHR-oE-Fkl"/>
                             <constraint firstItem="Lqg-lP-TgB" firstAttribute="trailing" secondItem="rm5-nG-1QK" secondAttribute="trailing" constant="45" id="Ypd-3c-ekH"/>
                             <constraint firstItem="2cB-8M-ZiW" firstAttribute="centerX" secondItem="xl6-bO-LSd" secondAttribute="centerX" id="hGo-3I-iKZ"/>
-                            <constraint firstItem="g9b-ZH-qc3" firstAttribute="centerX" secondItem="xl6-bO-LSd" secondAttribute="centerX" id="qkh-OW-npk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lqg-lP-TgB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="oc0-rj-iHh"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" id="oc0-rj-iHh">
+                        <color key="badgeColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.39582069019999999" green="0.68171002540000003" blue="0.054466116330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="dashboardBarItem" destination="oc0-rj-iHh" id="Tj3-cg-0Vu"/>
                         <outlet property="nameLabel" destination="rm5-nG-1QK" id="Vcd-sf-eSx"/>
@@ -165,7 +164,7 @@
             <objects>
                 <viewController id="7g6-0E-upx" customClass="MoreViewController" customModule="OCD_Therapy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lDO-FM-yad">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add an Exposure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qE6-rI-36w">
@@ -181,18 +180,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="413-mE-Zc3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Exposure" id="PMR-ay-r18"/>
+                    <tabBarItem key="tabBarItem" title="Add Exposure" image="icons8-add-50" id="PMR-ay-r18"/>
+                    <connections>
+                        <outlet property="exposureTabItem" destination="PMR-ay-r18" id="Waz-8v-heq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1f-E4-NoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4061" y="395"/>
         </scene>
-        <!--Settings-->
+        <!--Settings View Controller-->
         <scene sceneID="ANW-Np-4US">
             <objects>
                 <viewController id="Dti-G1-bEb" customClass="SettingsViewController" customModule="OCD_Therapy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a6a-7Y-vtP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9h-2G-5du">
@@ -208,7 +210,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0KT-04-a2X"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="wRa-IG-iSO"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="wRa-IG-iSO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yaa-mn-Dbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,12 +220,18 @@
         <scene sceneID="gcH-oS-VbR">
             <objects>
                 <tabBarController storyboardIdentifier="TabBarController" id="Fi0-7q-qh5" customClass="TabBarController" customModule="OCD_Therapy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RgJ-8n-8D4">
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="RgJ-8n-8D4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.39582069019999999" green="0.68171002540000003" blue="0.054466116330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
+                        <outlet property="homeTabBar" destination="RgJ-8n-8D4" id="OBX-bg-RNY"/>
                         <segue destination="DUM-RD-a5c" kind="relationship" relationship="viewControllers" id="WNa-c6-FUi"/>
                         <segue destination="7g6-0E-upx" kind="relationship" relationship="viewControllers" id="te3-Wl-a71"/>
                         <segue destination="Dti-G1-bEb" kind="relationship" relationship="viewControllers" id="Wa8-wl-Q2a"/>
@@ -342,5 +350,6 @@
     </scenes>
     <resources>
         <image name="background_image" width="300" height="450"/>
+        <image name="icons8-add-50" width="29" height="29"/>
     </resources>
 </document>

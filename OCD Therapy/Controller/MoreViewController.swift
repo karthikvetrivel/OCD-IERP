@@ -14,6 +14,16 @@ import ChameleonFramework
 
 class MoreViewController: UIViewController {
     
+    @IBOutlet weak var exposureTabItem: UITabBarItem!
+    
+    override func viewDidLoad() {
+        styleBarItem();
+    }
+    
+    func styleBarItem() {
+
+
+    }
     
 }
 
