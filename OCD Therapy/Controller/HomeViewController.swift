@@ -27,12 +27,15 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var dashboardBarItem: UITabBarItem!
     
+    @IBOutlet weak var practiceIERP: UIButton!
     //--------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
         cacheAuthorization()
         setBackground()
-        styleBarItem()
+        styleItems()
+        
+    
         
     }
     
@@ -61,12 +64,10 @@ class HomeViewController: UIViewController {
     }
 
     
-    func styleBarItem() {
-//        let appearance = UITabBarItem.appearance()
-//        let attributes: [NSAttributedString.Key: AnyObject] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue):UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular) NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.gray]
-//        appearance.setTitleTextAttributes(attribute_set, for: .normal)
-        
+    func styleItems() {
         dashboardBarItem.image = UIImage(named: "icons8-home-50")
+        practiceIERP.layer.cornerRadius = 10;
+
 
        
     }
