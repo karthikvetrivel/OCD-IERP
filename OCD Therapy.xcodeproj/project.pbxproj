@@ -28,6 +28,7 @@
 		8D84419E230A27E400CB8508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D84419C230A27E400CB8508 /* LaunchScreen.storyboard */; };
 		8D8441A9230A27E400CB8508 /* OCD_TherapyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8441A8230A27E400CB8508 /* OCD_TherapyTests.swift */; };
 		8D8441B4230A27E400CB8508 /* OCD_TherapyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8441B3230A27E400CB8508 /* OCD_TherapyUITests.swift */; };
+		8D89740A2366276100463FC0 /* DBUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8974092366276100463FC0 /* DBUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		8D8441AF230A27E400CB8508 /* OCD TherapyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OCD TherapyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8441B3230A27E400CB8508 /* OCD_TherapyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCD_TherapyUITests.swift; sourceTree = "<group>"; };
 		8D8441B5230A27E400CB8508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D8974092366276100463FC0 /* DBUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUtility.swift; sourceTree = "<group>"; };
 		ACC35402A7EA29867244CB52 /* Pods_OCD_TherapyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCD_TherapyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B381710A1B022A82880C8777 /* Pods_OCD_TherapyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCD_TherapyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BE4FD18B2AE2A78824900A /* Pods-OCD TherapyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD TherapyUITests.release.xcconfig"; path = "Target Support Files/Pods-OCD TherapyUITests/Pods-OCD TherapyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				3ABCF3932348F9C1004B5AD6 /* NavigationConstants.swift */,
 				3ABCF39523492C9F004B5AD6 /* ErrorHandle.swift */,
 				3AE1D2F1235231D100756FF6 /* StyleUtility.swift */,
+				8D8974092366276100463FC0 /* DBUtility.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				3A8DA7EF2348EFEE00E1A138 /* AppDelegate.swift in Sources */,
 				8D844199230A27E200CB8508 /* OCD_Therapy.xcdatamodeld in Sources */,
 				3ABCF3922348F986004B5AD6 /* HomeViewController.swift in Sources */,
+				8D89740A2366276100463FC0 /* DBUtility.swift in Sources */,
 				8D46EF322364A62700FE18D1 /* MoreViewController.swift in Sources */,
 				3AE1D2F2235231D100756FF6 /* StyleUtility.swift in Sources */,
 				3A8DA7F92348F0C600E1A138 /* SignUpViewController.swift in Sources */,

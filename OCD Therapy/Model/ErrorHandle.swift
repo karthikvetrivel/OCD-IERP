@@ -21,7 +21,7 @@ class ErrorHandle {
             alert.addButton(confirm)
 
             viewController.present(alert, animated: true, completion: nil)
-        }
+        } 
     }
 }
 

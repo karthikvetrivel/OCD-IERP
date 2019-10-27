@@ -11,11 +11,13 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 import ChameleonFramework
+import PopupDialog
 
 class MoreViewController: UIViewController, UITextViewDelegate {
     
 // Buttons
     @IBOutlet weak var exposureTabItem: UITabBarItem!
+    
     @IBOutlet weak var addFloatingButton: UIButton!
     
 // Primary Textfield
@@ -33,6 +35,7 @@ class MoreViewController: UIViewController, UITextViewDelegate {
     
     func floatingButton() {
         addFloatingButton.layer.cornerRadius = 30;
+        addFloatingButton.layer.masksToBounds = true;
     }
     
     func configTextView() {
@@ -61,10 +64,46 @@ class MoreViewController: UIViewController, UITextViewDelegate {
     }
     
     
+    @IBAction func initExposure(_ sender: Any) {
+        if (exposureTextView.text != nil || exposureTextView.text != "" || exposureTextView!.text != "Tell us about it!"){
+            let db = Firestore.firestore()
+            let user = Auth.auth().currentUser
+            let ref = db.collection("users").document(user!.uid);
+          
+            ref.collection("exposures").getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for _ in querySnapshot!.documents {
+                            DBUtility.documents.numUserExposures += 1;
+                            // for each collection in the user document, add one to the constant.
+                            // to find the # of exposures per user.
+                        }
+                    }
+            }
+            let queryExposure = "exposure" + String(DBUtility.documents.numUserExposures)
+            // create individual collection 'keys' for each exposure
+            
+            ref.collection("exposures").document(queryExposure).setData(["primaryFear": exposureTextView.text as Any])
+            // exposures > exposure0 > [primaryFear: fear]
+            
+            
+            DBUtility.documents.numUserExposures = 0;
+            // set count back to zero for future use
+
+        } else {
+            emptyTextBox();
+        }
+        
+    }
     
-    
-    
-    
+    func emptyTextBox() {
+        let alert = PopupDialog(title: "Error", message: "Please enter a fear into the text box.")
+        let confirm = DefaultButton(title: "Ok") {}
+        alert.addButton(confirm)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     
     
     
