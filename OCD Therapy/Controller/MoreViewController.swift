@@ -43,7 +43,7 @@ class MoreViewController: UIViewController, UITextViewDelegate {
         exposureTextView.textColor =  UIColor.lightGray
         
         exposureTextView.layer.cornerRadius = 10;
-        exposureTextView.backgroundColor = UIColor.flatWhite
+        exposureTextView.backgroundColor = UIColor.flatWhite()
         
     }
     

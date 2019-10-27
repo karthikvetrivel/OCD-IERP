@@ -10,6 +10,7 @@ import FirebaseAuth
 import PopupDialog
 import ChameleonFramework
 
+
 class SignInViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: UITextField!
@@ -38,8 +39,8 @@ class SignInViewController: UIViewController {
         emailTextField.addIcon(imageName: "email")
         passwordTextField.addIcon(imageName: "lock")
         
-        emailTextField.roundBorder(cornerRadius: emailTextField.frame.size.height / 2)
-        passwordTextField.roundBorder(cornerRadius: passwordTextField.frame.size.height / 2)
+        emailTextField.roundTextFieldBorder(cornerRadius: emailTextField.frame.size.height / 2)
+        passwordTextField.roundTextFieldBorder(cornerRadius: passwordTextField.frame.size.height / 2)
         
         emailTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
         passwordTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))

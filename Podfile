@@ -24,7 +24,8 @@ target 'OCD Therapy' do
   end
 
   pod 'PopupDialog', '~> 1.1'
+  pod 'GoogleSignIn'
   pod "Gradients"
-pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
 end

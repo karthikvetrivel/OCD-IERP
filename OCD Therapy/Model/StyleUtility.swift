@@ -16,7 +16,7 @@ extension UITextField {
         
         imageView.image = image;
         imageView.setImageColor(color: UIColor.gray)
-        imageView.frame = CGRect(x: 13, y: (self.frame.size.height - 20) / 2, width: 20, height: 20)
+        imageView.frame = CGRect(x: 13, y: ((self.frame.size.height - 20) / 2), width: 20, height: 20)
         self.addSubview(imageView)
         
         let leftView = UIView.init(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
@@ -24,7 +24,7 @@ extension UITextField {
         self.leftViewMode = UITextField.ViewMode.always
     }
     
-    func roundBorder(cornerRadius : CGFloat, borderWidth : CGFloat = 0.25, borderColor : CGColor = UIColor.white.cgColor) {
+    func roundTextFieldBorder(cornerRadius : CGFloat, borderWidth : CGFloat = 0.25, borderColor : CGColor = UIColor.white.cgColor) {
         //Basic texfield Setup
         self.borderStyle = .none
         
@@ -51,14 +51,14 @@ extension UIView {
         self.layer.shadowColor = color
     }
     
-    func roundBorder(cornerRadius : CGFloat, borderWidth : CGFloat = 0.25) {
+    func roundViewBorder(cornerRadius : CGFloat, borderWidth : CGFloat = 0.25) {
         self.layer.cornerRadius = cornerRadius
         self.layer.borderWidth = borderWidth
     }
 }
 
 extension UIButton {
-    func roundBorder() {
+    func roundButtonBorder() {
         //To apply corner radius
         self.layer.cornerRadius = self.frame.size.height / 2
         
