@@ -101,7 +101,9 @@ class SignInViewController: UIViewController {
             } else {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.tabBarController) as! TabBarController
-                self.present(nextViewController, animated:true, completion:nil)
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = nextViewController
+                appDelegate.window?.makeKeyAndVisible()
             }
         }
     }

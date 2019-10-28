@@ -92,9 +92,11 @@ class SignUpViewController: UIViewController {
     }
     
     func homeScreen() {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.homeViewController) as! HomeViewController
-        self.present(nextViewController, animated:true, completion:nil)
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.tabBarController) as! TabBarController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = nextViewController
+        appDelegate.window?.makeKeyAndVisible()
     }
     
     // MARK: Verify Input

@@ -67,15 +67,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func navigateHome() {
-        if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: NavigationConstants.Storyboard.homeViewController) as? HomeViewController {
-            if let window = self.window, let rootViewController = window.rootViewController {
-                var currentController = rootViewController
-                while let presentedController = currentController.presentedViewController {
-                    currentController = presentedController
-                }
-                currentController.present(controller, animated: true, completion: nil)
-            }
-        }
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.tabBarController) as! TabBarController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.window?.rootViewController = nextViewController
+        self.window?.makeKeyAndVisible()
     }
 
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
