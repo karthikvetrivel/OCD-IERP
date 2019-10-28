@@ -9,10 +9,11 @@ import UIKit
 import FirebaseAuth
 import PopupDialog
 import ChameleonFramework
-
+import GoogleSignIn
 
 class SignInViewController: UIViewController {
 
+    @IBOutlet weak var gidSignInButton: GIDSignInButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signInUIButton: UIButton!
@@ -21,6 +22,8 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         
         // MARK: Aesthetics Initialization
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        
         let backgroundTop = UIColor(hexString: "#ff9a9e")!
         let backgroundBottom = UIColor(hexString: "fad0c4")!
         

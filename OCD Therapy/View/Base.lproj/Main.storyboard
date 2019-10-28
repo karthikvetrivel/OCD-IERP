@@ -68,8 +68,12 @@
                                     <segue destination="FKk-SH-hxZ" kind="show" id="QAE-5d-66s"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blj-th-J0i" customClass="GIDSignInButton">
+                                <rect key="frame" x="87" y="491" width="200" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fnb-ow-qeH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dSM-4X-Sxn" secondAttribute="leading" id="4wW-mu-khm"/>
                             <constraint firstItem="JEy-l2-cH9" firstAttribute="centerX" secondItem="fnb-ow-qeH" secondAttribute="centerX" id="63c-NP-oTt"/>
@@ -88,12 +92,14 @@
                             <constraint firstItem="JEy-l2-cH9" firstAttribute="top" secondItem="ILe-Uo-1Y2" secondAttribute="bottom" constant="133.5" id="XaR-Rq-pb8"/>
                             <constraint firstItem="D8S-LM-NYJ" firstAttribute="leading" secondItem="dSM-4X-Sxn" secondAttribute="leading" id="f19-bD-ak7"/>
                             <constraint firstItem="dSM-4X-Sxn" firstAttribute="bottom" secondItem="mg7-Nr-yyN" secondAttribute="bottom" constant="107" id="iEf-57-LCy"/>
+                            <constraint firstItem="blj-th-J0i" firstAttribute="centerX" secondItem="0t4-zC-epq" secondAttribute="centerX" id="mcX-id-UIa"/>
                             <constraint firstItem="gIR-Gt-lAc" firstAttribute="trailing" secondItem="dSM-4X-Sxn" secondAttribute="trailing" id="oFg-Ma-Orc"/>
                             <constraint firstItem="dSM-4X-Sxn" firstAttribute="trailing" secondItem="JEy-l2-cH9" secondAttribute="trailing" constant="48" id="pva-Ru-xUX"/>
                             <constraint firstItem="mg7-Nr-yyN" firstAttribute="centerX" secondItem="0t4-zC-epq" secondAttribute="centerX" id="rj7-2D-bzQ"/>
                             <constraint firstItem="JEy-l2-cH9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dSM-4X-Sxn" secondAttribute="leading" id="tNs-0v-gbK"/>
                             <constraint firstItem="ILe-Uo-1Y2" firstAttribute="centerX" secondItem="0t4-zC-epq" secondAttribute="centerX" id="uD2-7J-701"/>
                             <constraint firstItem="JEy-l2-cH9" firstAttribute="top" secondItem="gIR-Gt-lAc" secondAttribute="bottom" constant="60" id="vjn-5S-6pX"/>
+                            <constraint firstItem="blj-th-J0i" firstAttribute="top" secondItem="fnb-ow-qeH" secondAttribute="bottom" constant="100" id="vwc-i2-sGe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dSM-4X-Sxn"/>
                     </view>
@@ -101,13 +107,14 @@
                     <connections>
                         <outlet property="createAccountUIButton" destination="mg7-Nr-yyN" id="S9E-jG-0fh"/>
                         <outlet property="emailTextField" destination="JEy-l2-cH9" id="fTD-cs-xhC"/>
+                        <outlet property="gidSignInButton" destination="blj-th-J0i" id="rW3-Zk-TwK"/>
                         <outlet property="passwordTextField" destination="fnb-ow-qeH" id="RGm-Iq-zwy"/>
                         <outlet property="signInUIButton" destination="J1z-xe-jkj" id="Uc0-7r-v2i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWK-dr-Ici" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821.7391304347827" y="-100.44642857142857"/>
+            <point key="canvasLocation" x="1821.5999999999999" y="-101.19940029985008"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="mwI-KF-UTA">
@@ -332,7 +339,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="IERP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hb8-kj-WC9">
                                 <rect key="frame" x="119" y="78" width="137.5" height="75.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="63"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xge-cS-2Aj">
@@ -391,8 +398,12 @@
                                     <action selector="signUpPressed:" destination="FKk-SH-hxZ" eventType="touchUpInside" id="vyt-mP-eGu"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FyE-jd-v3W" customClass="GIDSignInButton">
+                                <rect key="frame" x="87" y="480" width="200" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="z70-uG-U9R" firstAttribute="top" secondItem="Qsj-ku-obe" secondAttribute="bottom" constant="8" id="3zm-g7-voi"/>
                             <constraint firstItem="xge-cS-2Aj" firstAttribute="leading" secondItem="2kQ-64-LeD" secondAttribute="leading" constant="48" id="A8J-tN-7p2"/>
@@ -403,6 +414,8 @@
                             <constraint firstItem="hNS-S9-vBz" firstAttribute="centerX" secondItem="mvD-Bo-NXJ" secondAttribute="centerX" id="Lo0-JO-KbG"/>
                             <constraint firstItem="Qsj-ku-obe" firstAttribute="top" secondItem="xge-cS-2Aj" secondAttribute="bottom" constant="8" id="MvD-fA-gi4"/>
                             <constraint firstItem="Hb8-kj-WC9" firstAttribute="top" secondItem="mvD-Bo-NXJ" secondAttribute="top" constant="78" id="SM8-T0-nnp"/>
+                            <constraint firstItem="FyE-jd-v3W" firstAttribute="top" secondItem="z70-uG-U9R" secondAttribute="bottom" constant="100" id="W9K-uD-vGx"/>
+                            <constraint firstItem="FyE-jd-v3W" firstAttribute="centerX" secondItem="mvD-Bo-NXJ" secondAttribute="centerX" id="bQG-GO-2AH"/>
                             <constraint firstItem="z70-uG-U9R" firstAttribute="top" secondItem="Qsj-ku-obe" secondAttribute="bottom" constant="8" id="cMO-ni-Jj1"/>
                             <constraint firstItem="z70-uG-U9R" firstAttribute="leading" secondItem="2kQ-64-LeD" secondAttribute="leading" constant="48" id="dff-69-bwQ"/>
                             <constraint firstItem="Qsj-ku-obe" firstAttribute="leading" secondItem="2kQ-64-LeD" secondAttribute="leading" constant="48" id="eYG-Fm-5Am"/>
@@ -422,6 +435,7 @@
                         <outlet property="confirmPasswordTextField" destination="z70-uG-U9R" id="SGk-u1-yS1"/>
                         <outlet property="emailTextField" destination="xge-cS-2Aj" id="bY1-KB-YmX"/>
                         <outlet property="fullNameTextField" destination="op1-tJ-uYW" id="P14-EO-Abj"/>
+                        <outlet property="gidSignUpButton" destination="FyE-jd-v3W" id="mUM-Rt-SX8"/>
                         <outlet property="passwordTextField" destination="Qsj-ku-obe" id="hnp-Lx-baN"/>
                         <outlet property="signInButton" destination="pTY-eR-3dN" id="tks-fg-cI1"/>
                         <outlet property="signUpButton" destination="hNS-S9-vBz" id="bX6-m7-e6x"/>

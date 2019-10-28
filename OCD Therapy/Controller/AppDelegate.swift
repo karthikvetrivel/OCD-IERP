@@ -18,23 +18,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
       // ...
-      if let error = error {
-        // ...
-        return
-      }
-
-      guard let authentication = user.authentication else { return }
-      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+        if let error = error {
+            print("Ran into an error: " + error.localizedDescription)
+            return
+        }
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                         accessToken: authentication.accessToken)
         Auth.auth().signIn(with: credential) { (authResult, error) in
-          if let error = error {
-            // ...
-            return
-          }
-          // User is signed in
-          // ...
+            if let error = error {
+                print("Error signing in: " + error.localizedDescription)
+                return
+            }
+            let id = Auth.auth().currentUser?.uid
+            let db = Firestore.firestore()
+            let docRef = db.collection("users").document(id!)
+            docRef.getDocument { (document, error) in
+                if document!.exists {
+                    // Document exists
+                    self.navigateHome()
+               } else {
+                    // Document does not exist, make a document
+                    let token = user.authentication.accessToken!
+                    // Make a url request to get basic user information: email, first name, last name
+                    let url = URL(string: "https://www.googleapis.com/oauth2/v3/userinfo?access_token=" + token)
+                    URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
+                        guard let data = data, error == nil else { return }
+                        do {
+                            let userData = try JSONSerialization.jsonObject(with: data, options:[]) as? [String:AnyObject]
+
+                            let fullName = (userData!["given_name"] as! String) + " " + (userData!["family_name"] as! String)
+                            let email = userData!["email"]
+
+                            print("got here")
+                            db.collection("users").document(id!).setData(["name": fullName, "email": email]) {
+                                (error) in if (error != nil) {
+                                // TODO: Error message
+                                }
+                                self.navigateHome()
+                            }
+                        } catch let error {
+                            print(error)
+                        }
+                    }).resume()
+                }
+            }
         }
-      // ...
+    }
+    
+    func navigateHome() {
+        if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: NavigationConstants.Storyboard.homeViewController) as? HomeViewController {
+            if let window = self.window, let rootViewController = window.rootViewController {
+                var currentController = rootViewController
+                while let presentedController = currentController.presentedViewController {
+                    currentController = presentedController
+                }
+                currentController.present(controller, animated: true, completion: nil)
+            }
+        }
     }
 
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {

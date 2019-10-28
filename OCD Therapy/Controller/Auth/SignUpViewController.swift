@@ -11,9 +11,11 @@ import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 import ChameleonFramework
+import GoogleSignIn
 
 class SignUpViewController: UIViewController {
-
+    
+    @IBOutlet weak var gidSignUpButton: GIDSignInButton!
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
