@@ -13,7 +13,7 @@ import FirebaseFirestore
 import ChameleonFramework
 import PopupDialog
 
-class MoreViewController: UIViewController, UITextViewDelegate {
+class ExposureViewController: UIViewController, UITextViewDelegate {
     
 // Buttons
     @IBOutlet weak var exposureTabItem: UITabBarItem!
@@ -29,9 +29,6 @@ class MoreViewController: UIViewController, UITextViewDelegate {
         floatingButton()
         configTextView()
     }
-    
-
-    
     
     func floatingButton() {
         addFloatingButton.layer.cornerRadius = 30;
@@ -59,13 +56,11 @@ class MoreViewController: UIViewController, UITextViewDelegate {
             textView.text = "Placeholder"
             textView.textColor = UIColor.lightGray
         }
-        
-        
     }
     
     
     @IBAction func initExposure(_ sender: Any) {
-        if (exposureTextView.text != nil || exposureTextView.text != "" || exposureTextView!.text != "Tell us about it!"){
+        if (exposureTextView.text != nil && exposureTextView.text != "" && exposureTextView!.text != "Tell us about it!"){
             let db = Firestore.firestore()
             let user = Auth.auth().currentUser
             let ref = db.collection("users").document(user!.uid);
@@ -104,9 +99,6 @@ class MoreViewController: UIViewController, UITextViewDelegate {
         self.present(alert, animated: true, completion: nil)
         
     }
-    
-    
-    
 }
 
 

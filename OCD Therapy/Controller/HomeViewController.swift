@@ -13,10 +13,6 @@ import FirebaseFirestore
 import ChameleonFramework
 
 class HomeViewController: UIViewController {
-
-    
-    // Primary Variable Declaration:
-    @IBOutlet weak var collectionView: UICollectionView!
     
     // Background Constants
     let backgroundTop = UIColor(hexString: "#ff9a9e")!
@@ -34,13 +30,9 @@ class HomeViewController: UIViewController {
         cacheAuthorization()
         setBackground()
         styleItems()
-        
-    
-        
     }
     
     func cacheAuthorization() {
-
         if Auth.auth().currentUser != nil {
             let db = Firestore.firestore()
             let doc = db.collection("users").document(Auth.auth().currentUser!.uid)
@@ -67,9 +59,6 @@ class HomeViewController: UIViewController {
     func styleItems() {
         dashboardBarItem.image = UIImage(named: "icons8-home-50")
         practiceIERP.layer.cornerRadius = 10;
-
-
-       
     }
 }
 

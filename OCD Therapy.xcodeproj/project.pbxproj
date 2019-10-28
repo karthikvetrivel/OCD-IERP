@@ -21,7 +21,7 @@
 		8D329C5E23513A5100552D25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D329C5D23513A5100552D25 /* GoogleService-Info.plist */; };
 		8D46EF2B2361633800FE18D1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D46EF2A2361633800FE18D1 /* SettingsViewController.swift */; };
 		8D46EF2F2361683F00FE18D1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D46EF2E2361683F00FE18D1 /* TabBarController.swift */; };
-		8D46EF322364A62700FE18D1 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D46EF312364A62700FE18D1 /* MoreViewController.swift */; };
+		8D46EF322364A62700FE18D1 /* ExposureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D46EF312364A62700FE18D1 /* ExposureViewController.swift */; };
 		8D844196230A27E200CB8508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D844194230A27E200CB8508 /* Main.storyboard */; };
 		8D844199230A27E200CB8508 /* OCD_Therapy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D844197230A27E200CB8508 /* OCD_Therapy.xcdatamodeld */; };
 		8D84419B230A27E400CB8508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D84419A230A27E400CB8508 /* Assets.xcassets */; };
@@ -65,7 +65,7 @@
 		8D329C5D23513A5100552D25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D46EF2A2361633800FE18D1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8D46EF2E2361683F00FE18D1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		8D46EF312364A62700FE18D1 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		8D46EF312364A62700FE18D1 /* ExposureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureViewController.swift; sourceTree = "<group>"; };
 		8D84418D230A27E200CB8508 /* OCD Therapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OCD Therapy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D844195230A27E200CB8508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D844198230A27E200CB8508 /* OCD_Therapy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OCD_Therapy.xcdatamodel; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				3A8DA7ED2348EFEE00E1A138 /* AppDelegate.swift */,
 				3ABCF3912348F986004B5AD6 /* HomeViewController.swift */,
 				8D46EF2A2361633800FE18D1 /* SettingsViewController.swift */,
-				8D46EF312364A62700FE18D1 /* MoreViewController.swift */,
+				8D46EF312364A62700FE18D1 /* ExposureViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -483,7 +483,7 @@
 				8D844199230A27E200CB8508 /* OCD_Therapy.xcdatamodeld in Sources */,
 				3ABCF3922348F986004B5AD6 /* HomeViewController.swift in Sources */,
 				8D89740A2366276100463FC0 /* DBUtility.swift in Sources */,
-				8D46EF322364A62700FE18D1 /* MoreViewController.swift in Sources */,
+				8D46EF322364A62700FE18D1 /* ExposureViewController.swift in Sources */,
 				3AE1D2F2235231D100756FF6 /* StyleUtility.swift in Sources */,
 				3A8DA7F92348F0C600E1A138 /* SignUpViewController.swift in Sources */,
 			);
