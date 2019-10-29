@@ -20,10 +20,7 @@ class TabBarController: UITabBarController {
    
     override func viewDidLoad() {
         homeTabBar.barTintColor = UIColor.white;
-        
-        self.homeTabBar.tintColor = UIColor.darkGray;
-        
-     
+        self.homeTabBar.tintColor = UIColor.darkGray;     
     }
 }
 

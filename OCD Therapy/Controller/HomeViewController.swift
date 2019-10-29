@@ -29,7 +29,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         cacheAuthorization()
         setBackground()
-        styleItems()
     }
     
     func cacheAuthorization() {
@@ -53,12 +52,6 @@ class HomeViewController: UIViewController {
     
     func setBackground() {
         self.view.backgroundColor = UIColor(gradientStyle:UIGradientStyle.topToBottom, withFrame:self.view.frame, andColors:[backgroundTop, backgroundBottom])
-    }
-
-    
-    func styleItems() {
-        dashboardBarItem.image = UIImage(named: "icons8-home-50")
-        practiceIERP.layer.cornerRadius = 10;
     }
 }
 

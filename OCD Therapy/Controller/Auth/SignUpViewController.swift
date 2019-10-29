@@ -25,11 +25,14 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+        //MARK: Initialize Aesthetics
+        initializeView()
+        initializeButtons()
+    }
+    
+    func initializeView() {
         let backgroundTop = UIColor(hexString: "#ff9a9e")!
         let backgroundBottom = UIColor(hexString: "fad0c4")!
-        gSignUp.googlify()
         
         self.view.backgroundColor = UIColor(gradientStyle:UIGradientStyle.topToBottom, withFrame:self.view.frame, andColors:[backgroundTop, backgroundBottom])
         
@@ -38,49 +41,28 @@ class SignUpViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
-        
-        //MARK: Initialize Aesthetics
-        
-        fullNameTextField.backgroundColor = .white
-        emailTextField.backgroundColor = .white
-        passwordTextField.backgroundColor = .white
-        confirmPasswordTextField.backgroundColor = .white
-        
-        
-        
-        fullNameTextField.addIcon(imageName: "email")
-        emailTextField.addIcon(imageName: "email")
-        passwordTextField.addIcon(imageName: "lock")
-        confirmPasswordTextField.addIcon(imageName: "lock")
-        
-        
-        fullNameTextField.roundTextFieldBorder(cornerRadius: fullNameTextField.frame.size.height / 2)
-        emailTextField.roundTextFieldBorder(cornerRadius: emailTextField.frame.size.height / 2)
-        passwordTextField.roundTextFieldBorder(cornerRadius: passwordTextField.frame.size.height / 2)
-        confirmPasswordTextField.roundTextFieldBorder(cornerRadius: confirmPasswordTextField.frame.size.height / 2)
-        
-        fullNameTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
-        emailTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
-        passwordTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
-        confirmPasswordTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
-        
+    }
+    
+    func initializeButtons() {
+        fullNameTextField.styleInputTextField(imageName: "profile")
+        emailTextField.styleInputTextField(imageName: "email")
+        passwordTextField.styleInputTextField(imageName: "lock")
+        confirmPasswordTextField.styleInputTextField(imageName: "lock")
         signUpButton.registerStyle()
+        gSignUp.googlify()
         
+        // Make a colored attributed String
         let createAccountAttributes: [NSAttributedString.Key : Any] = [ NSAttributedString.Key.foregroundColor: UIColor(red:0.89, green:0.33, blue:0.42, alpha:1.0), NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue ]
         let accountCreateString = NSMutableAttributedString(string: "Already Have An Account? ")
         accountCreateString.append(NSAttributedString(string: "Sign In", attributes: createAccountAttributes))
 
         // set attributed text on a UILabel
         signInButton.setAttributedTitle(accountCreateString, for: .normal)
-        
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        
     }
     
     @IBAction func signInUIButtonPressed(_ sender: Any) {

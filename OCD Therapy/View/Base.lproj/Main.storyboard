@@ -184,8 +184,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lqg-lP-TgB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="oc0-rj-iHh">
-                        <color key="badgeColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="home" id="oc0-rj-iHh">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.39582069019999999" green="0.68171002540000003" blue="0.054466116330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -280,7 +279,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="413-mE-Zc3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Exposure" image="icons8-add-50" id="PMR-ay-r18"/>
+                    <tabBarItem key="tabBarItem" title="Add Exposure" image="plus" id="PMR-ay-r18"/>
                     <connections>
                         <outlet property="addFloatingButton" destination="6X1-Q4-TJJ" id="B2u-VL-xuJ"/>
                         <outlet property="exposureTabItem" destination="PMR-ay-r18" id="Waz-8v-heq"/>
@@ -493,6 +492,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-add-50" width="29" height="29"/>
+        <image name="home" width="30" height="30"/>
+        <image name="plus" width="30" height="30"/>
     </resources>
 </document>

@@ -20,11 +20,14 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var createAccountUIButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance()?.presentingViewController = self
         
         // MARK: Aesthetics Initialization
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        gSignIn.googlify()
-        
+        initializeView()
+        initializeButtons()
+    }
+    
+    func initializeView() {
         let backgroundTop = UIColor(hexString: "#ff9a9e")!
         let backgroundBottom = UIColor(hexString: "fad0c4")!
         
@@ -35,21 +38,14 @@ class SignInViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
+    }
+    
+    func initializeButtons() {
+        emailTextField.styleInputTextField(imageName: "email")
+        passwordTextField.styleInputTextField(imageName: "lock")
+        signInUIButton.registerStyle()
+        gSignIn.googlify()
         
-        // Initialize aesthetic changes
-        emailTextField.backgroundColor = .white
-        passwordTextField.backgroundColor = .white
-        
-        emailTextField.addIcon(imageName: "email")
-        passwordTextField.addIcon(imageName: "lock")
-        
-        emailTextField.roundTextFieldBorder(cornerRadius: emailTextField.frame.size.height / 2)
-        passwordTextField.roundTextFieldBorder(cornerRadius: passwordTextField.frame.size.height / 2)
-        
-        emailTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
-        passwordTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
-        
-        signInUIButton.registerStyle();
         
         // Underline and make the string red
         let createAccountAttributes: [NSAttributedString.Key : Any] = [ NSAttributedString.Key.foregroundColor: UIColor(red:0.89, green:0.33, blue:0.42, alpha:1.0), NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue ]
@@ -57,9 +53,8 @@ class SignInViewController: UIViewController {
         
         accountCreateString.append(NSAttributedString(string: "Create One", attributes: createAccountAttributes))
 
-        // set attributed text on a UILabel
+        // Set attributed text on a UILabel
         createAccountUIButton.setAttributedTitle(accountCreateString, for: .normal)
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -68,8 +63,7 @@ class SignInViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    // MARK: Sign In
-
+    // MARK: Handle Sign In
     @IBAction func signInPressed(_ sender: Any) {
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if (!ParseUtility.verifyEmail(email: email)) {

@@ -59,7 +59,13 @@ extension UITextField {
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor
     }
-
+    
+    func styleInputTextField(imageName: String) {
+        self.backgroundColor = .white
+        self.addIcon(imageName: imageName)
+        self.roundTextFieldBorder(cornerRadius: self.frame.size.height / 2)
+        self.addShadow(opacity: 0.2, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
+    }
 }
 
 extension UIImageView {
