@@ -9,6 +9,33 @@
 import Foundation
 import UIKit
 
+class StyleUtility {
+    static func resizedImageWith(image: UIImage, targetSize: CGSize) -> UIImage {
+
+        let imageSize = image.size
+        let newWidth  = targetSize.width  / image.size.width
+        let newHeight = targetSize.height / image.size.height
+        var newSize: CGSize
+
+        if(newWidth > newHeight) {
+            newSize = CGSize(width: imageSize.width * newHeight, height: imageSize.height * newHeight)
+        } else {
+            newSize = CGSize(width: imageSize.width * newWidth,  height: imageSize.height * newWidth)
+        }
+
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+
+        image.draw(in: rect)
+
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return newImage!
+    }
+}
+
 extension UITextField {
     func addIcon(imageName : String) {
         let imageView = UIImageView();
@@ -44,7 +71,7 @@ extension UIImageView {
 }
 
 extension UIView {
-    func addShadow(opacity : Float = 0.5, radius : CGFloat = 5.0, offset : CGSize = CGSize(width: 0, height: 0), color : CGColor = UIColor.black.cgColor) {
+    func addShadow(opacity : Float = 0.2, radius : CGFloat = 5.0, offset : CGSize = CGSize(width: 0, height: 0), color : CGColor = UIColor.black.cgColor) {
         self.layer.shadowOpacity = opacity
         self.layer.shadowRadius = radius
         self.layer.shadowOffset = offset
@@ -58,28 +85,32 @@ extension UIView {
 }
 
 extension UIButton {
-    func roundButtonBorder() {
+    func roundButtonBorder(cornerRadius: CGFloat) {
         //To apply corner radius
-        self.layer.cornerRadius = self.frame.size.height / 2
-        
+        self.layer.cornerRadius = cornerRadius
     }
-}
-
-extension UIImage {
-    func scaleImage(toSize newSize: CGSize) -> UIImage? {
-        var newImage: UIImage?
-        let newRect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height).integral
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
-        if let context = UIGraphicsGetCurrentContext(), let cgImage = self.cgImage {
-            context.interpolationQuality = .high
-            let flipVertical = CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: newSize.height)
-            context.concatenate(flipVertical)
-            context.draw(cgImage, in: newRect)
-            if let img = context.makeImage() {
-                newImage = UIImage(cgImage: img)
-            }
-            UIGraphicsEndImageContext()
-        }
-        return newImage
+    
+    func leftImage(image: UIImage, renderMode: UIImage.RenderingMode) {
+        let newImage = StyleUtility.resizedImageWith(image: image, targetSize: CGSize(width: 36.0, height: 36.0))
+        self.setImage(newImage.withRenderingMode(renderMode), for: .normal)
+        print(newImage.size.width)
+        self.imageEdgeInsets = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: newImage.size.width / 2)
+        self.contentHorizontalAlignment = .left
+        self.imageView?.contentMode = .scaleAspectFit
+    }
+    
+    func googlify() {
+        self.leftImage(image: UIImage(named: "google.png")!, renderMode: UIImage.RenderingMode.alwaysOriginal)
+        self.backgroundColor = .white
+        self.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 10)
+        self.roundButtonBorder(cornerRadius: 10.0)
+        self.addShadow(opacity: 0.2)
+    }
+    
+    func registerStyle() {
+        self.contentEdgeInsets = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15)
+        self.backgroundColor = .white
+        self.layer.cornerRadius = 10
+        self.addShadow(opacity: 0.2)
     }
 }

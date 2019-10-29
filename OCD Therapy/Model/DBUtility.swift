@@ -11,8 +11,6 @@ import Foundation
 class DBUtility {
     struct documents {
         static var numUserExposures = 0;
-        
     }
-
 }
 

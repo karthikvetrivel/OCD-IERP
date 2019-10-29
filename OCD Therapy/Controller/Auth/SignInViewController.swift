@@ -13,7 +13,7 @@ import GoogleSignIn
 
 class SignInViewController: UIViewController {
 
-    @IBOutlet weak var gidSignInButton: GIDSignInButton!
+    @IBOutlet weak var gSignIn: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signInUIButton: UIButton!
@@ -23,6 +23,7 @@ class SignInViewController: UIViewController {
         
         // MARK: Aesthetics Initialization
         GIDSignIn.sharedInstance()?.presentingViewController = self
+        gSignIn.googlify()
         
         let backgroundTop = UIColor(hexString: "#ff9a9e")!
         let backgroundBottom = UIColor(hexString: "fad0c4")!
@@ -48,11 +49,7 @@ class SignInViewController: UIViewController {
         emailTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
         passwordTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
         
-        signInUIButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15)
-        signInUIButton.backgroundColor = UIColor(red:0.89, green:0.33, blue:0.42, alpha:1.0)
-        signInUIButton.layer.cornerRadius = 10
-        
-        signInUIButton.addShadow(opacity: 0.7, radius: 5.0, offset: CGSize(width: 0, height: 5.0), color: UIColor(red:0.89, green:0.33, blue:0.42, alpha:1.0).cgColor)
+        signInUIButton.registerStyle();
         
         // Underline and make the string red
         let createAccountAttributes: [NSAttributedString.Key : Any] = [ NSAttributedString.Key.foregroundColor: UIColor(red:0.89, green:0.33, blue:0.42, alpha:1.0), NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue ]
@@ -99,12 +96,16 @@ class SignInViewController: UIViewController {
                 ErrorHandle.handleError(error!, viewController: self as UIViewController)
                 return
             } else {
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.tabBarController) as! TabBarController
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = nextViewController
-                appDelegate.window?.makeKeyAndVisible()
+                self.routeToHomeScreen()
             }
         }
+    }
+    
+    func routeToHomeScreen() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.tabBarController) as! TabBarController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = nextViewController
+        appDelegate.window?.makeKeyAndVisible()
     }
 }

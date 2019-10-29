@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
     
+    // MARK: Manage Sign in
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
       // ...
         if let error = error {
@@ -35,10 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let docRef = db.collection("users").document(id!)
             docRef.getDocument { (document, error) in
                 if document!.exists {
-                    // Document exists
-                    self.navigateHome()
+                    // Document exists so route to home
+                    self.routeToHomeScreen()
                } else {
-                    // Document does not exist, make a document
+                    // Document does not exist aka user is signing up, make a document
                     let token = user.authentication.accessToken!
                     // Make a url request to get basic user information: email, first name, last name
                     let url = URL(string: "https://www.googleapis.com/oauth2/v3/userinfo?access_token=" + token)
@@ -48,14 +49,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                             let userData = try JSONSerialization.jsonObject(with: data, options:[]) as? [String:AnyObject]
 
                             let fullName = (userData!["given_name"] as! String) + " " + (userData!["family_name"] as! String)
-                            let email = userData!["email"]
-
-                            print("got here")
+                            let email = userData!["email"] as! String
+                        
                             db.collection("users").document(id!).setData(["name": fullName, "email": email]) {
                                 (error) in if (error != nil) {
                                 // TODO: Error message
                                 }
-                                self.navigateHome()
+                                self.routeToHomeScreen()
                             }
                         } catch let error {
                             print(error)
@@ -66,10 +66,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
     }
     
-    func navigateHome() {
+    func routeToHomeScreen() {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.tabBarController) as! TabBarController
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.window?.rootViewController = nextViewController
         self.window?.makeKeyAndVisible()
     }
@@ -85,7 +84,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-
+        // MARK: Automatic routing
+        // TODO: Uncomment for final app
 //        
 //        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
 //        if Auth.auth().currentUser != nil {

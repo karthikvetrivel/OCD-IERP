@@ -15,7 +15,7 @@ import GoogleSignIn
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet weak var gidSignUpButton: GIDSignInButton!
+    @IBOutlet weak var gSignUp: UIButton!
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -29,6 +29,7 @@ class SignUpViewController: UIViewController {
         
         let backgroundTop = UIColor(hexString: "#ff9a9e")!
         let backgroundBottom = UIColor(hexString: "fad0c4")!
+        gSignUp.googlify()
         
         self.view.backgroundColor = UIColor(gradientStyle:UIGradientStyle.topToBottom, withFrame:self.view.frame, andColors:[backgroundTop, backgroundBottom])
         
@@ -63,11 +64,7 @@ class SignUpViewController: UIViewController {
         passwordTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
         confirmPasswordTextField.addShadow(opacity: 0.3, radius: 7.0, offset: CGSize(width: 0, height: 6.0))
         
-        signUpButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15)
-        signUpButton.layer.cornerRadius = 10
-
-        signUpButton.addShadow(opacity: 0.7, radius: 5.0, offset: CGSize(width: 0, height: 5.0), color: UIColor(red:0.89, green:0.33, blue:0.42, alpha:1.0).cgColor)
-        signUpButton.backgroundColor = UIColor(red:0.89, green:0.33, blue:0.42, alpha:1.0)
+        signUpButton.registerStyle()
         
         let createAccountAttributes: [NSAttributedString.Key : Any] = [ NSAttributedString.Key.foregroundColor: UIColor(red:0.89, green:0.33, blue:0.42, alpha:1.0), NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue ]
         let accountCreateString = NSMutableAttributedString(string: "Already Have An Account? ")
@@ -91,8 +88,8 @@ class SignUpViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    func homeScreen() {
-                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+    func routeToHomeScreen() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.tabBarController) as! TabBarController
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = nextViewController
@@ -143,7 +140,7 @@ class SignUpViewController: UIViewController {
                     }
                 }
                 
-                self.homeScreen()
+                self.routeToHomeScreen()
             }
         }
     }
