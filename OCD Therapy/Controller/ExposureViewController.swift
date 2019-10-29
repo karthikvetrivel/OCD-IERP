@@ -28,11 +28,14 @@ class ExposureViewController: UIViewController, UITextViewDelegate {
         exposureTextView.delegate = self;
         floatingButton()
         configTextView()
+        
     }
     
     func floatingButton() {
         addFloatingButton.layer.cornerRadius = 30;
         addFloatingButton.layer.masksToBounds = true;
+        // Centers the text vertically
+        addFloatingButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
     }
     
     func configTextView() {
