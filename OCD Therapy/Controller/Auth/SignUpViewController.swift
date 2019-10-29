@@ -145,6 +145,10 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    @IBAction func gSignUpPressed(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
     @IBAction func confirmPasswordEditChanged(_ sender: Any) {
         let password = passwordTextField.text!
         let confirmPassword = confirmPasswordTextField.text!

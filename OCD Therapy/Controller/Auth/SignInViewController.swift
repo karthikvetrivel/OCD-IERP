@@ -101,6 +101,10 @@ class SignInViewController: UIViewController {
         }
     }
     
+    @IBAction func gSignInPressed(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
     func routeToHomeScreen() {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.tabBarController) as! TabBarController
