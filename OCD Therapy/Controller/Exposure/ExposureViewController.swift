@@ -43,7 +43,7 @@ class ExposureViewController: UIViewController, UITextViewDelegate {
         exposureTextView.textColor =  UIColor.lightGray
         
         exposureTextView.layer.cornerRadius = 10;
-        exposureTextView.backgroundColor = UIColor.flatWhite()
+        exposureTextView.backgroundColor = UIColor.flatWhite
         
     }
     
@@ -87,6 +87,8 @@ class ExposureViewController: UIViewController, UITextViewDelegate {
             
             
             DBUtility.documents.numUserExposures = 0;
+            let controller = storyboard?.instantiateViewController(withIdentifier: "conseqView") as! ConseqViewController
+            present(controller, animated: true, completion: nil)
             // set count back to zero for future use
 
         } else {
