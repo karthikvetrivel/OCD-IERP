@@ -16,6 +16,7 @@ import PopupDialog
 class ExposureViewController: UIViewController, UITextViewDelegate {
     
 // Buttons
+    
     @IBOutlet weak var exposureTabItem: UITabBarItem!
     
     @IBOutlet weak var addFloatingButton: UIButton!
@@ -67,26 +68,32 @@ class ExposureViewController: UIViewController, UITextViewDelegate {
             let db = Firestore.firestore()
             let user = Auth.auth().currentUser
             let ref = db.collection("users").document(user!.uid);
-          
+            
+         
             ref.collection("exposures").getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
                     } else {
-                        for _ in querySnapshot!.documents {
+                        for document in querySnapshot!.documents {
+                            print("\(document.documentID) => \(document.data())")
                             DBUtility.documents.numUserExposures += 1;
-                            // for each collection in the user document, add one to the constant.
-                            // to find the # of exposures per user.
+                           
                         }
                     }
+                
             }
+        
             let queryExposure = "exposure" + String(DBUtility.documents.numUserExposures)
             // create individual collection 'keys' for each exposure
+           
             
             ref.collection("exposures").document(queryExposure).setData(["primaryFear": exposureTextView.text as Any])
             // exposures > exposure0 > [primaryFear: fear]
             
-            
             DBUtility.documents.numUserExposures = 0;
+
+            
+            
             let controller = storyboard?.instantiateViewController(withIdentifier: "conseqView") as! ConseqViewController
             present(controller, animated: true, completion: nil)
             // set count back to zero for future use

@@ -505,7 +505,7 @@
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Wv-cW-jDt">
-                                <rect key="frame" x="35" y="294.5" width="305" height="182.5"/>
+                                <rect key="frame" x="35" y="266.5" width="305" height="210.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Tell us about it!">
@@ -518,16 +518,16 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Consequence..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEN-Ce-mCL">
-                                <rect key="frame" x="35" y="237.5" width="248" height="32"/>
+                                <rect key="frame" x="35" y="209.5" width="248" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="If your fear were true, what would the consequences be? Try to think of and add as many as you can. " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koO-Td-2Dv">
-                                <rect key="frame" x="35" y="116.5" width="316" height="88"/>
+                                <rect key="frame" x="35" y="116.5" width="316" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="nAI-xn-e06"/>
+                                    <constraint firstAttribute="height" constant="60" id="nAI-xn-e06"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -543,6 +543,9 @@
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="initConseq:" destination="sR7-DE-ge8" eventType="touchUpInside" id="NMr-Ep-JAb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -574,6 +577,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EjL-xi-Xbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4060" y="1105"/>
+        </scene>
+        <!--Add Exposure-->
+        <scene sceneID="l5u-ku-y3I">
+            <objects>
+                <viewController storyboardIdentifier="lovedView" id="CJj-n1-yLA" customClass="lovedViewController" customModule="OCD_Therapy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nU6-IA-KBX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Effect Family?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jV1-Hz-Bxp">
+                                <rect key="frame" x="35" y="50" width="218" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w8T-ia-vg9">
+                                <rect key="frame" x="35" y="275" width="305" height="202"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Tell us about it!">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="18"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add an Effect..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PK9-cJ-3Ms">
+                                <rect key="frame" x="35" y="218" width="172" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="How would this affect those you love? Apply all effects that apply." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onS-kI-4F7">
+                                <rect key="frame" x="35" y="117" width="316" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="iUP-Zd-qiU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dby-3a-sPm">
+                                <rect key="frame" x="270" y="562" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2Dl-yh-f6A"/>
+                                    <constraint firstAttribute="height" constant="60" id="hoP-65-Cr2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="46"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="initLoved:" destination="CJj-n1-yLA" eventType="touchUpInside" id="7vz-LJ-7hf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w8T-ia-vg9" firstAttribute="top" secondItem="PK9-cJ-3Ms" secondAttribute="bottom" constant="25" id="D9l-nY-hv8"/>
+                            <constraint firstItem="onS-kI-4F7" firstAttribute="top" secondItem="jV1-Hz-Bxp" secondAttribute="bottom" constant="27" id="Fm0-qH-xZR"/>
+                            <constraint firstItem="w8T-ia-vg9" firstAttribute="centerX" secondItem="nU6-IA-KBX" secondAttribute="centerX" id="GRY-xM-3VM"/>
+                            <constraint firstItem="onS-kI-4F7" firstAttribute="leading" secondItem="jV1-Hz-Bxp" secondAttribute="leading" id="IX8-aP-2ug"/>
+                            <constraint firstItem="jV1-Hz-Bxp" firstAttribute="top" secondItem="Tj0-8x-VOj" secondAttribute="top" constant="30" id="MLL-1G-F5P"/>
+                            <constraint firstItem="Tj0-8x-VOj" firstAttribute="trailing" secondItem="Dby-3a-sPm" secondAttribute="trailing" constant="45" id="P7X-dO-ADS"/>
+                            <constraint firstItem="PK9-cJ-3Ms" firstAttribute="top" secondItem="onS-kI-4F7" secondAttribute="bottom" constant="41" id="RFH-H5-fxf"/>
+                            <constraint firstItem="PK9-cJ-3Ms" firstAttribute="leading" secondItem="Tj0-8x-VOj" secondAttribute="leading" constant="35" id="SQG-tr-FOH"/>
+                            <constraint firstItem="Tj0-8x-VOj" firstAttribute="bottom" secondItem="Dby-3a-sPm" secondAttribute="bottom" constant="45" id="YOx-tr-E3m"/>
+                            <constraint firstItem="jV1-Hz-Bxp" firstAttribute="leading" secondItem="Tj0-8x-VOj" secondAttribute="leading" constant="35" id="g5X-Ua-F7p"/>
+                            <constraint firstItem="Dby-3a-sPm" firstAttribute="top" secondItem="w8T-ia-vg9" secondAttribute="bottom" constant="85" id="hao-bC-lO7"/>
+                            <constraint firstItem="w8T-ia-vg9" firstAttribute="leading" secondItem="PK9-cJ-3Ms" secondAttribute="leading" id="mWj-sv-K0w"/>
+                            <constraint firstItem="Tj0-8x-VOj" firstAttribute="trailing" secondItem="onS-kI-4F7" secondAttribute="trailing" constant="24" id="zEa-eV-SUY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tj0-8x-VOj"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add Exposure" image="plus" id="Jg6-5x-pHK"/>
+                    <connections>
+                        <outlet property="addFloatingButton" destination="Dby-3a-sPm" id="epP-EJ-YFU"/>
+                        <outlet property="lovedTextView" destination="w8T-ia-vg9" id="xaC-XH-hqk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m1q-U4-qKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4780" y="1094"/>
         </scene>
     </scenes>
     <resources>
