@@ -42,7 +42,7 @@ class lovedViewController: UIViewController, UITextViewDelegate {
         lovedTextView.textColor =  UIColor.lightGray
         
         lovedTextView.layer.cornerRadius = 10;
-        lovedTextView.backgroundColor = UIColor.flatWhite()
+        lovedTextView.backgroundColor = UIColor.flatWhite
         
     }
     
@@ -67,8 +67,8 @@ class lovedViewController: UIViewController, UITextViewDelegate {
             let user = Auth.auth().currentUser
             let ref = db.collection("users").document(user!.uid);
             
-            let queryExposure = "exposure" + String(DBUtility.documents.numUserExposures - 1) // reference last exposure
-            let queryEffect = "effect" + String(DBUtility.documents.numUserExposures - 1) // finds the relating effect document
+            let queryExposure = "exposure" + String(DBUtility.documents.numUserExposures) // reference last exposure
+            let queryEffect = "effect" + String(DBUtility.documents.numUserExposures) // finds the relating effect document
           
             print("HI!")
             ref.collection("exposures").document(queryExposure).collection("effects").document(queryEffect).setData(["primaryEffect": lovedTextView.text as Any])

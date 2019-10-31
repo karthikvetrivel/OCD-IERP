@@ -42,7 +42,7 @@ class ConseqViewController: UIViewController, UITextViewDelegate {
         conseqTextView.textColor =  UIColor.lightGray
         
         conseqTextView.layer.cornerRadius = 10;
-        conseqTextView.backgroundColor = UIColor.flatWhite()
+        conseqTextView.backgroundColor = UIColor.flatWhite
         
     }
     
@@ -68,8 +68,8 @@ class ConseqViewController: UIViewController, UITextViewDelegate {
             let ref = db.collection("users").document(user!.uid);
 
             print(DBUtility.documents.numUserExposures)
-            let queryExposure = "exposure" + String(DBUtility.documents.numUserExposures - 1) // reference last exposure
-            let queryConseq = "consequence" + String(DBUtility.documents.numUserExposures - 1) // finds the same relating consequence document
+            let queryExposure = "exposure" + String(DBUtility.documents.numUserExposures) // reference last exposure
+            let queryConseq = "consequence" + String(DBUtility.documents.numUserExposures) // finds the same relating consequence document
         ref.collection("exposures").document(queryExposure).collection("consequences").document(queryConseq).setData(["primaryConseq": conseqTextView.text as Any])
             // exposures > exposure0 > consequences > consequence0 > [primaryConseq: consequence]
             

@@ -44,7 +44,7 @@ class ExposureViewController: UIViewController, UITextViewDelegate {
         exposureTextView.textColor =  UIColor.lightGray
         
         exposureTextView.layer.cornerRadius = 10;
-        exposureTextView.backgroundColor = UIColor.flatWhite()
+        exposureTextView.backgroundColor = UIColor.flatWhite
         
     }
     
@@ -69,34 +69,41 @@ class ExposureViewController: UIViewController, UITextViewDelegate {
             let user = Auth.auth().currentUser
             let ref = db.collection("users").document(user!.uid);
             
-         
+            DBUtility.documents.numUserExposures = 0;
+            
+            
             ref.collection("exposures").getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
                     } else {
                         for document in querySnapshot!.documents {
                             print("\(document.documentID) => \(document.data())")
+                            print(DBUtility.documents.numUserExposures);
                             DBUtility.documents.numUserExposures += 1;
-                           
+                            
                         }
+                        
+                     
+                        let queryExposure = "exposure" + String(DBUtility.documents.numUserExposures)
+                        // create individual collection 'keys' for each exposure
+                        
+                        ref.collection("exposures").document(queryExposure).setData(["primaryFear": self.exposureTextView.text as Any])
+                        // exposures > exposure0 > [primaryFear: fear]
+                        
+                        
+                        
+                        
+                        let controller = self.storyboard?.instantiateViewController(withIdentifier: "conseqView") as! ConseqViewController
+                        self.present(controller, animated: true, completion: nil)
+                        // set count back to zero for future use
+                        
                     }
                 
             }
-        
-            let queryExposure = "exposure" + String(DBUtility.documents.numUserExposures)
-            // create individual collection 'keys' for each exposure
-           
-            
-            ref.collection("exposures").document(queryExposure).setData(["primaryFear": exposureTextView.text as Any])
-            // exposures > exposure0 > [primaryFear: fear]
-            
-            DBUtility.documents.numUserExposures = 0;
-
             
             
-            let controller = storyboard?.instantiateViewController(withIdentifier: "conseqView") as! ConseqViewController
-            present(controller, animated: true, completion: nil)
-            // set count back to zero for future use
+            
+            
 
         } else {
             emptyTextBox();
