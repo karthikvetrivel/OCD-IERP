@@ -48,17 +48,22 @@ class HomeViewController: UIViewController {
                     var userString : String = dataDescription!["name"] as? String ?? "user"
                     userString = userString.components(separatedBy: " ").first!
                     self.nameLabel.text  = "Welcome back " + userString + "!"
-//                    self.collectionView.numberOfItems(inSection: 2);
+
                     doc.collection("exposures").getDocuments() { (querySnapshot, err) in
                         let count = querySnapshot!.count
-                        
                         var data : String = ""
                         let mainGroup = DispatchGroup()
                         mainGroup.enter()
                         let dispatchQueue = DispatchQueue(label: "consequences-effects")
                         let dispatchSemaphore = DispatchSemaphore(value: 0)
+                        var iterations : Int
+                        if (count >= 2) {
+                            iterations = 2;
+                        } else {
+                            iterations = max(count, 0)
+                        }
                         dispatchQueue.async {
-                            for i in max(0, count - 2)..<count {
+                            for i in 0..<iterations {
                                 let index = String(count - 1 - i)
                                 print(index)
                                 doc.collection("exposures").document("exposure" + index).collection("consequences").document("consequence" + index).getDocument(source: .default) { (document, error) in
@@ -69,7 +74,7 @@ class HomeViewController: UIViewController {
                                         self.collectionViewData[i] = data
                                         data = ""
                                         dispatchSemaphore.signal()
-                                        if (i == count - 1) {
+                                        if (i == iterations - 1) {
                                             mainGroup.leave()
                                         }
                                     }
@@ -78,7 +83,6 @@ class HomeViewController: UIViewController {
                             }
                         }
                         mainGroup.notify(queue: DispatchQueue.main) {
-                            print("got here")
                             self.collectionView.delegate = self
                             self.collectionView.dataSource = self
                         }
