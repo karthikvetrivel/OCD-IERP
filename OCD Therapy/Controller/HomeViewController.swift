@@ -25,6 +25,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dashboardBarItem: UITabBarItem!
     
     @IBOutlet weak var practiceIERP: UIButton!
+    
+    var collectionViewData = [Int:String]()
     //--------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,11 +48,41 @@ class HomeViewController: UIViewController {
                     var userString : String = dataDescription!["name"] as? String ?? "user"
                     userString = userString.components(separatedBy: " ").first!
                     self.nameLabel.text  = "Welcome back " + userString + "!"
-                    
-                    print(document)
 //                    self.collectionView.numberOfItems(inSection: 2);
-//                    self.collectionView.delegate = self
-//                    self.collectionView.dataSource = self
+                    doc.collection("exposures").getDocuments() { (querySnapshot, err) in
+                        let count = querySnapshot!.count
+                        
+                        var data : String = ""
+                        let mainGroup = DispatchGroup()
+                        mainGroup.enter()
+                        let dispatchQueue = DispatchQueue(label: "consequences-effects")
+                        let dispatchSemaphore = DispatchSemaphore(value: 0)
+                        dispatchQueue.async {
+                            for i in max(0, count - 2)..<count {
+                                let index = String(count - 1 - i)
+                                print(index)
+                                doc.collection("exposures").document("exposure" + index).collection("consequences").document("consequence" + index).getDocument(source: .default) { (document, error) in
+                                    data = document!.data()!["primaryConseq"] as! String
+                                    doc.collection("exposures").document("exposure" + index).collection("effect").document("effect" + index).getDocument(source: .default) { (document, error) in
+                                        data = data + " " + (document!.data()!["primaryEffect"] as! String)
+                                        print("Gathered Data: " + data)
+                                        self.collectionViewData[i] = data
+                                        data = ""
+                                        dispatchSemaphore.signal()
+                                        if (i == count - 1) {
+                                            mainGroup.leave()
+                                        }
+                                    }
+                                }
+                                dispatchSemaphore.wait()
+                            }
+                        }
+                        mainGroup.notify(queue: DispatchQueue.main) {
+                            print("got here")
+                            self.collectionView.delegate = self
+                            self.collectionView.dataSource = self
+                        }
+                    }
                 } else {
                     print("Document does not exist in cache")
                 }
@@ -58,16 +90,15 @@ class HomeViewController: UIViewController {
             }
         }
     }
-
     
     func setBackground() {
         self.view.backgroundColor = UIColor(gradientStyle:UIGradientStyle.topToBottom, withFrame:self.view.frame, andColors:[backgroundTop, backgroundBottom])
     }
 }
 
-extension UIViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2;
+        return self.collectionViewData.count;
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -92,8 +123,7 @@ extension UIViewController:UICollectionViewDelegate, UICollectionViewDataSource,
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "identifier", for: indexPath) as! HomeUICollectionViewCell
-
-        cell.label.text = String(indexPath.row + 1)
+        cell.label.text = self.collectionViewData[indexPath.row]
         cell.backgroundColor = .clear
         cell.view.backgroundColor = .white
         cell.view.layer.cornerRadius = 25

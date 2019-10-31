@@ -42,7 +42,7 @@ class LovedViewController: UIViewController, UITextViewDelegate {
         lovedTextView.textColor =  UIColor.lightGray
         
         lovedTextView.layer.cornerRadius = 10;
-        lovedTextView.backgroundColor = UIColor.flatWhite
+        lovedTextView.backgroundColor = UIColor.flatWhite()
         
     }
     
