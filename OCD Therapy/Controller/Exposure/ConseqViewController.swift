@@ -42,7 +42,7 @@ class ConseqViewController: UIViewController, UITextViewDelegate {
         conseqTextView.textColor =  UIColor.lightGray
         
         conseqTextView.layer.cornerRadius = 10;
-        conseqTextView.backgroundColor = UIColor.flatWhite
+        conseqTextView.backgroundColor = UIColor.flatWhite()
         
     }
     

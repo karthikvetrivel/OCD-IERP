@@ -27,5 +27,5 @@ target 'OCD Therapy' do
   pod 'GoogleSignIn'
   pod "Gradients"
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
-
+  pod 'AIFlatSwitch'
 end

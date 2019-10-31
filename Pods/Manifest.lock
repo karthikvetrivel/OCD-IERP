@@ -1,4 +1,5 @@
 PODS:
+  - AIFlatSwitch (1.0.7)
   - AppAuth (1.2.0):
     - AppAuth/Core (= 1.2.0)
     - AppAuth/ExternalUserAgent (= 1.2.0)
@@ -151,6 +152,7 @@ PODS:
   - Protobuf (3.10.0)
 
 DEPENDENCIES:
+  - AIFlatSwitch
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Firebase
   - Firebase/Analytics
@@ -164,6 +166,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AIFlatSwitch
     - AppAuth
     - BoringSSL-GRPC
     - DynamicBlurView
@@ -202,6 +205,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ViccAlexander/Chameleon.git
 
 SPEC CHECKSUMS:
+  AIFlatSwitch: fd56a5e6ab8769f0b52cef815c4f071e83050352
   AppAuth: bce82c76043657c99d91e7882e8a9e1a93650cd4
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
@@ -231,6 +235,6 @@ SPEC CHECKSUMS:
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
 
-PODFILE CHECKSUM: 0e7c01a02b9b233ef22ef4daa7778f6670362d13
+PODFILE CHECKSUM: 3c732333c7455dcc2ddffaa55fe19c524a6f371d
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.8.4
