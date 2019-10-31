@@ -178,17 +178,22 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehw-vt-4W4">
                                                     <rect key="frame" x="8" y="28" width="370" height="586"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4K-tU-1hu">
-                                                            <rect key="frame" x="164" y="282.5" width="42" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgd-QG-WXr">
+                                                            <rect key="frame" x="20" y="135" width="327" height="297"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="327" id="I4t-Sg-LuK"/>
+                                                                <constraint firstAttribute="height" constant="297" id="OPG-2c-KSj"/>
+                                                            </constraints>
+                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="a4K-tU-1hu" firstAttribute="centerX" secondItem="ehw-vt-4W4" secondAttribute="centerX" id="D4p-fL-r5t"/>
-                                                        <constraint firstItem="a4K-tU-1hu" firstAttribute="centerY" secondItem="ehw-vt-4W4" secondAttribute="centerY" id="aql-ET-RWa"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Pgd-QG-WXr" secondAttribute="trailing" constant="23" id="LaL-yc-Ube"/>
+                                                        <constraint firstItem="Pgd-QG-WXr" firstAttribute="leading" secondItem="ehw-vt-4W4" secondAttribute="leading" constant="20" id="jvk-Jt-bz4"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -201,7 +206,7 @@
                                         </constraints>
                                         <size key="customSize" width="386" height="622"/>
                                         <connections>
-                                            <outlet property="label" destination="a4K-tU-1hu" id="Idh-G9-Gy2"/>
+                                            <outlet property="label" destination="Pgd-QG-WXr" id="wgu-DD-pB7"/>
                                             <outlet property="view" destination="ehw-vt-4W4" id="Ouu-JD-t9s"/>
                                         </connections>
                                     </collectionViewCell>
@@ -214,6 +219,7 @@
                             <constraint firstItem="zsy-Gg-ew4" firstAttribute="top" secondItem="wwu-hs-dDd" secondAttribute="bottom" constant="20" id="8oN-m9-OjP"/>
                             <constraint firstItem="rm5-nG-1QK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lqg-lP-TgB" secondAttribute="leading" symbolic="YES" id="9t4-TZ-wXZ"/>
                             <constraint firstItem="rm5-nG-1QK" firstAttribute="top" secondItem="Lqg-lP-TgB" secondAttribute="top" constant="30" id="9tB-L2-nm3"/>
+                            <constraint firstItem="Vor-4I-2IG" firstAttribute="top" secondItem="zsy-Gg-ew4" secondAttribute="bottom" constant="8" id="Dmd-cf-BVi"/>
                             <constraint firstAttribute="bottom" secondItem="Vor-4I-2IG" secondAttribute="bottom" constant="60" id="O5H-bn-mya"/>
                             <constraint firstItem="zsy-Gg-ew4" firstAttribute="leading" secondItem="Lqg-lP-TgB" secondAttribute="leading" constant="30" id="PsP-09-zSS"/>
                             <constraint firstItem="Vor-4I-2IG" firstAttribute="top" secondItem="zsy-Gg-ew4" secondAttribute="bottom" constant="8" id="SD8-Ur-PLT"/>

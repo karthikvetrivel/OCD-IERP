@@ -11,5 +11,8 @@ import UIKit
 class HomeUICollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var view: UIView!
-    @IBOutlet weak var label: UILabel!
+
+    
+    @IBOutlet weak var label: UITextView!
+    
 }

@@ -160,8 +160,6 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
         cell.view.layer.borderColor = UIColor.white.cgColor
         cell.view.layer.borderWidth = 0
         cell.view.addShadow(opacity: 0.20)
-        cell.label.numberOfLines = 0;
-        cell.label.lineBreakMode = .byWordWrapping
         return cell
     }
 }
