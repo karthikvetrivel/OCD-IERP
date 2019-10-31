@@ -13,7 +13,7 @@ import FirebaseFirestore
 import ChameleonFramework
 import PopupDialog
 
-class lovedViewController: UIViewController, UITextViewDelegate {
+class AnxietyViewController: UIViewController{
     
     
     @IBOutlet weak var addFloatingButton: UIButton!
@@ -69,13 +69,13 @@ class lovedViewController: UIViewController, UITextViewDelegate {
             
             let queryExposure = "exposure" + String(DBUtility.documents.numUserExposures) // reference last exposure
             let queryEffect = "effect" + String(DBUtility.documents.numUserExposures) // finds the relating effect document
-          
+            
             print("HI!")
             ref.collection("exposures").document(queryExposure).collection("effects").document(queryEffect).setData(["primaryEffect": lovedTextView.text as Any])
             // exposures > exposure0 > consequences > consequence0 > [primaryConseq: consequence]
             
             completionTextBox();
-         
+            
             
         } else {
             emptyTextBox();
@@ -102,6 +102,7 @@ class lovedViewController: UIViewController, UITextViewDelegate {
         
     }
 }
+
 
 
 

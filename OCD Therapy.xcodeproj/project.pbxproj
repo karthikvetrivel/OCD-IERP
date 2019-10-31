@@ -30,7 +30,8 @@
 		8D8441B4230A27E400CB8508 /* OCD_TherapyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8441B3230A27E400CB8508 /* OCD_TherapyUITests.swift */; };
 		8D89740A2366276100463FC0 /* DBUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8974092366276100463FC0 /* DBUtility.swift */; };
 		8DBD60EC23693E22004F4151 /* ConseqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD60EB23693E22004F4151 /* ConseqViewController.swift */; };
-		8DBD60EE236948B7004F4151 /* lovedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD60ED236948B7004F4151 /* lovedViewController.swift */; };
+		8DBD60EE236948B7004F4151 /* LovedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD60ED236948B7004F4151 /* LovedViewController.swift */; };
+		8DBD60F0236A8A6A004F4151 /* AnxietyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD60EF236A8A6A004F4151 /* AnxietyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +83,8 @@
 		8D8441B5230A27E400CB8508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D8974092366276100463FC0 /* DBUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUtility.swift; sourceTree = "<group>"; };
 		8DBD60EB23693E22004F4151 /* ConseqViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConseqViewController.swift; sourceTree = "<group>"; };
-		8DBD60ED236948B7004F4151 /* lovedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lovedViewController.swift; sourceTree = "<group>"; };
+		8DBD60ED236948B7004F4151 /* LovedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedViewController.swift; sourceTree = "<group>"; };
+		8DBD60EF236A8A6A004F4151 /* AnxietyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnxietyViewController.swift; sourceTree = "<group>"; };
 		ACC35402A7EA29867244CB52 /* Pods_OCD_TherapyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCD_TherapyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B381710A1B022A82880C8777 /* Pods_OCD_TherapyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCD_TherapyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BE4FD18B2AE2A78824900A /* Pods-OCD TherapyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD TherapyUITests.release.xcconfig"; path = "Target Support Files/Pods-OCD TherapyUITests/Pods-OCD TherapyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -242,7 +244,8 @@
 			children = (
 				8D46EF312364A62700FE18D1 /* ExposureViewController.swift */,
 				8DBD60EB23693E22004F4151 /* ConseqViewController.swift */,
-				8DBD60ED236948B7004F4151 /* lovedViewController.swift */,
+				8DBD60ED236948B7004F4151 /* LovedViewController.swift */,
+				8DBD60EF236A8A6A004F4151 /* AnxietyViewController.swift */,
 			);
 			path = Exposure;
 			sourceTree = "<group>";
@@ -494,9 +497,10 @@
 				8D46EF2B2361633800FE18D1 /* SettingsViewController.swift in Sources */,
 				8DBD60EC23693E22004F4151 /* ConseqViewController.swift in Sources */,
 				3A8DA7F72348F0A900E1A138 /* SignInViewController.swift in Sources */,
+				8DBD60F0236A8A6A004F4151 /* AnxietyViewController.swift in Sources */,
 				3A8DA7EF2348EFEE00E1A138 /* AppDelegate.swift in Sources */,
 				8D844199230A27E200CB8508 /* OCD_Therapy.xcdatamodeld in Sources */,
-				8DBD60EE236948B7004F4151 /* lovedViewController.swift in Sources */,
+				8DBD60EE236948B7004F4151 /* LovedViewController.swift in Sources */,
 				3ABCF3922348F986004B5AD6 /* HomeViewController.swift in Sources */,
 				8D89740A2366276100463FC0 /* DBUtility.swift in Sources */,
 				8D46EF322364A62700FE18D1 /* ExposureViewController.swift in Sources */,

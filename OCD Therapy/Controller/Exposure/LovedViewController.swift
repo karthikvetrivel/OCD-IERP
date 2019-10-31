@@ -13,18 +13,18 @@ import FirebaseFirestore
 import ChameleonFramework
 import PopupDialog
 
-class ConseqViewController: UIViewController, UITextViewDelegate {
+class LovedViewController: UIViewController, UITextViewDelegate {
     
     
     @IBOutlet weak var addFloatingButton: UIButton!
     
     // Primary Textfield
- 
-    @IBOutlet weak var conseqTextView: UITextView!
+    
+    @IBOutlet weak var lovedTextView: UITextView!
     
     
     override func viewDidLoad() {
-        conseqTextView.delegate = self;
+        lovedTextView.delegate = self;
         floatingButton()
         configTextView()
         
@@ -38,11 +38,11 @@ class ConseqViewController: UIViewController, UITextViewDelegate {
     }
     
     func configTextView() {
-        conseqTextView.text = "Tell us about it!"
-        conseqTextView.textColor =  UIColor.lightGray
+        lovedTextView.text = "Tell us about it!"
+        lovedTextView.textColor =  UIColor.lightGray
         
-        conseqTextView.layer.cornerRadius = 10;
-        conseqTextView.backgroundColor = UIColor.flatWhite
+        lovedTextView.layer.cornerRadius = 10;
+        lovedTextView.backgroundColor = UIColor.flatWhite
         
     }
     
@@ -61,20 +61,20 @@ class ConseqViewController: UIViewController, UITextViewDelegate {
     }
     
     
-    @IBAction func initConseq(_ sender: Any) {
-        if (conseqTextView.text != nil && conseqTextView.text != "" && conseqTextView!.text != "Tell us about it!"){
+    @IBAction func initLoved(_ sender: Any) {
+        if (lovedTextView.text != nil && lovedTextView.text != "" && lovedTextView!.text != "Tell us about it!"){
             let db = Firestore.firestore()
             let user = Auth.auth().currentUser
             let ref = db.collection("users").document(user!.uid);
-
-            print(DBUtility.documents.numUserExposures)
+            
             let queryExposure = "exposure" + String(DBUtility.documents.numUserExposures) // reference last exposure
-            let queryConseq = "consequence" + String(DBUtility.documents.numUserExposures) // finds the same relating consequence document
-        ref.collection("exposures").document(queryExposure).collection("consequences").document(queryConseq).setData(["primaryConseq": conseqTextView.text as Any])
+            let queryEffect = "effect" + String(DBUtility.documents.numUserExposures) // finds the relating effect document
+         ref.collection("exposures").document(queryExposure).collection("effect").document(queryEffect).setData(["primaryEffect": lovedTextView.text as Any])
             // exposures > exposure0 > consequences > consequence0 > [primaryConseq: consequence]
             
-            let controller = storyboard?.instantiateViewController(withIdentifier: "lovedView") as! LovedViewController
+            let controller = storyboard?.instantiateViewController(withIdentifier: "anxietyView") as! AnxietyViewController
             present(controller, animated: true, completion: nil)
+         
             
         } else {
             emptyTextBox();
@@ -89,7 +89,9 @@ class ConseqViewController: UIViewController, UITextViewDelegate {
         self.present(alert, animated: true, completion: nil)
         
     }
+    
 }
+
 
 
 
