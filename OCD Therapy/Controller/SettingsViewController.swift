@@ -29,6 +29,14 @@ class SettingsViewController: UIViewController {
         logOutButton.roundButtonBorder(cornerRadius: 10.0)
         logOutButton.addShadow(opacity: 0.2)
     }
+    @IBAction func logOutPressed(_ sender: Any) {
+        try! Auth.auth().signOut()
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.signInViewController) as! SignInViewController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = nextViewController
+        appDelegate.window?.makeKeyAndVisible()
+    }
 }
 
 

@@ -99,7 +99,6 @@ extension UIButton {
     func leftImage(image: UIImage, renderMode: UIImage.RenderingMode) {
         let newImage = StyleUtility.resizedImageWith(image: image, targetSize: CGSize(width: 36.0, height: 36.0))
         self.setImage(newImage.withRenderingMode(renderMode), for: .normal)
-        print(newImage.size.width)
         self.imageEdgeInsets = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: newImage.size.width / 2)
         self.contentHorizontalAlignment = .left
         self.imageView?.contentMode = .scaleAspectFit

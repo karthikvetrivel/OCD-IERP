@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		012EBE30A9B25FA75048D299 /* Pods_OCD_Therapy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF5092E074FCD4A26C374BD /* Pods_OCD_Therapy.framework */; };
+		3A665A7B236A8BAE00608599 /* HomeUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A665A7A236A8BAE00608599 /* HomeUICollectionViewCell.swift */; };
 		3A8DA7EF2348EFEE00E1A138 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8DA7ED2348EFEE00E1A138 /* AppDelegate.swift */; };
 		3A8DA7F72348F0A900E1A138 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8DA7F62348F0A900E1A138 /* SignInViewController.swift */; };
 		3A8DA7F92348F0C600E1A138 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8DA7F82348F0C600E1A138 /* SignUpViewController.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		0A767EA21A6314FA886EC897 /* Pods-OCD TherapyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD TherapyTests.debug.xcconfig"; path = "Target Support Files/Pods-OCD TherapyTests/Pods-OCD TherapyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		19E46DAA140BA0A62D023C29 /* Pods-OCD Therapy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCD Therapy.release.xcconfig"; path = "Target Support Files/Pods-OCD Therapy/Pods-OCD Therapy.release.xcconfig"; sourceTree = "<group>"; };
+		3A665A7A236A8BAE00608599 /* HomeUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUICollectionViewCell.swift; sourceTree = "<group>"; };
 		3A8DA7ED2348EFEE00E1A138 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8DA7F62348F0A900E1A138 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3A8DA7F82348F0C600E1A138 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				8D84419C230A27E400CB8508 /* LaunchScreen.storyboard */,
 				8D844194230A27E200CB8508 /* Main.storyboard */,
 				8D46EF2E2361683F00FE18D1 /* TabBarController.swift */,
+				3A665A7A236A8BAE00608599 /* HomeUICollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				8D46EF2B2361633800FE18D1 /* SettingsViewController.swift in Sources */,
 				8DBD60EC23693E22004F4151 /* ConseqViewController.swift in Sources */,
 				3A8DA7F72348F0A900E1A138 /* SignInViewController.swift in Sources */,
+				3A665A7B236A8BAE00608599 /* HomeUICollectionViewCell.swift in Sources */,
 				3A8DA7EF2348EFEE00E1A138 /* AppDelegate.swift in Sources */,
 				8D844199230A27E200CB8508 /* OCD_Therapy.xcdatamodeld in Sources */,
 				8DBD60EE236948B7004F4151 /* lovedViewController.swift in Sources */,

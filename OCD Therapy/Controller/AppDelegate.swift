@@ -85,22 +85,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         // MARK: Automatic routing
-        // TODO: Uncomment for final app
-//        
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//        if Auth.auth().currentUser != nil {
-//            // Since the user is signed in set the rootViewController to the home page
-//            let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.homeViewController) as! HomeViewController
-//            self.window = UIWindow(frame: UIScreen.main.bounds)
-//            self.window?.rootViewController = nextViewController
-//            self.window?.makeKeyAndVisible()
-//        } else {
-//            // User must sign in so the rootViewController is the sign in page
-//            let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.signInViewController) as! SignInViewController
-//            self.window = UIWindow(frame: UIScreen.main.bounds)
-//            self.window?.rootViewController = nextViewController
-//            self.window?.makeKeyAndVisible()
-//        }
+
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        if Auth.auth().currentUser != nil {
+            // Since the user is signed in set the rootViewController to the home page
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.tabBarController) as! TabBarController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = nextViewController
+            self.window?.makeKeyAndVisible()
+        } else {
+            // User must sign in so the rootViewController is the sign in page
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: NavigationConstants.Storyboard.signInViewController) as! SignInViewController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = nextViewController
+            self.window?.makeKeyAndVisible()
+        }
         
         return true
     }
