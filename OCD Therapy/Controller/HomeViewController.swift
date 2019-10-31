@@ -87,14 +87,17 @@ class HomeViewController: UIViewController {
                                                 .font: UIFont.boldSystemFont(ofSize: 22),
                                                 .foregroundColor: UIColor.black,
                                             ]
-                                            var cardText = NSMutableAttributedString(string: "Fear", attributes: title)
-                                            cardText.append(NSAttributedString(string: "\n" + primaryFear))
+                                            let description: [NSAttributedString.Key: Any] = [
+                                                .font: UIFont.systemFont(ofSize: 18),
+                                            ]
+                                            var cardText = NSMutableAttributedString(string: "\nFear", attributes: title)
+                                            cardText.append(NSAttributedString(string: "\n" + primaryFear, attributes: description))
                                             cardText.append(NSAttributedString(string: "\n\n" + "Consequence", attributes: title))
-                                            cardText.append(NSAttributedString(string: "\n" + consequence))
+                                            cardText.append(NSAttributedString(string: "\n" + consequence, attributes: description))
                                             cardText.append(NSAttributedString(string: "\n\n" + "Effect", attributes: title))
-                                            cardText.append(NSAttributedString(string: "\n" + effect))
+                                            cardText.append(NSAttributedString(string: "\n" + effect, attributes: description))
                                             cardText.append(NSAttributedString(string: "\n\n" + "Anxiety Level", attributes: title))
-                                            cardText.append(NSAttributedString(string: "\n" + anxietyLevel))
+                                            cardText.append(NSAttributedString(string: "\n" + anxietyLevel, attributes: description))
                                             self.collectionViewData[i] = cardText
                                             dispatchSemaphore.signal()
                                             if (i == iterations - 1) {
@@ -141,8 +144,7 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
 //
 //        let leftInset = (collectionView.bounds.size.width - totalCellWidth + totalSpacingWidth) / 2
 //        let rightInset = leftInset
-        let rightInset = self.collectionViewData.count == 1 ? 0 : collectionView.bounds.size.width / 3
-        return UIEdgeInsets(top: 0, left: (collectionView.bounds.size.width - 100) / 2 - 105, bottom: 0, right: rightInset)
+        return UIEdgeInsets(top: 0, left: (collectionView.bounds.size.width - 100) / 2 - 105, bottom: 0, right: 50)
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout
