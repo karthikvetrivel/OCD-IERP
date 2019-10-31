@@ -308,10 +308,7 @@
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable App Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-Ug-B9i">
-                                <rect key="frame" x="35" y="140" width="204" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="yvm-9w-Nee"/>
-                                </constraints>
+                                <rect key="frame" x="35" y="140" width="204" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -332,7 +329,7 @@
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XP8-uc-KcU" customClass="AIFlatSwitch" customModule="AIFlatSwitch">
-                                <rect key="frame" x="310" y="137" width="30" height="30"/>
+                                <rect key="frame" x="310" y="137" width="30" height="27.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
@@ -358,7 +355,6 @@
                             <constraint firstItem="nz8-rr-eUS" firstAttribute="centerX" secondItem="a6a-7Y-vtP" secondAttribute="centerX" id="KSj-KR-IuR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nz8-rr-eUS" secondAttribute="trailing" constant="19" id="NFB-J9-9jl"/>
                             <constraint firstItem="0KT-04-a2X" firstAttribute="bottom" secondItem="yIG-kb-NfR" secondAttribute="bottom" constant="17" id="Njt-6d-Xqp"/>
-                            <constraint firstItem="hhp-Ug-B9i" firstAttribute="top" secondItem="a6a-7Y-vtP" secondAttribute="top" constant="140" id="Txg-0p-UZT"/>
                             <constraint firstItem="XP8-uc-KcU" firstAttribute="leading" secondItem="hhp-Ug-B9i" secondAttribute="trailing" constant="71" id="Wc3-5m-jRc"/>
                             <constraint firstItem="hhp-Ug-B9i" firstAttribute="top" secondItem="nz8-rr-eUS" secondAttribute="bottom" constant="11" id="ZQA-9Q-6se"/>
                             <constraint firstItem="U9h-2G-5du" firstAttribute="top" secondItem="0KT-04-a2X" secondAttribute="top" constant="30" id="a53-SL-RTO"/>
