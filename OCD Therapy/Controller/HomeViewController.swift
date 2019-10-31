@@ -69,7 +69,7 @@ class HomeViewController: UIViewController {
                                 doc.collection("exposures").document("exposure" + index).collection("consequences").document("consequence" + index).getDocument(source: .default) { (document, error) in
                                     data = document!.data()!["primaryConseq"] as! String
                                     doc.collection("exposures").document("exposure" + index).collection("effect").document("effect" + index).getDocument(source: .default) { (document, error) in
-                                        data = data + " " + (document!.data()!["primaryEffect"] as! String)
+                                        data = data + "\n" + (document!.data()!["primaryEffect"] as! String)
                                         print("Gathered Data: " + data)
                                         self.collectionViewData[i] = data
                                         data = ""
@@ -83,6 +83,7 @@ class HomeViewController: UIViewController {
                             }
                         }
                         mainGroup.notify(queue: DispatchQueue.main) {
+                            // Finished fetching the data. Make the collectionview
                             self.collectionView.delegate = self
                             self.collectionView.dataSource = self
                         }
@@ -116,7 +117,8 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
 //
 //        let leftInset = (collectionView.bounds.size.width - totalCellWidth + totalSpacingWidth) / 2
 //        let rightInset = leftInset
-        return UIEdgeInsets(top: 0, left: (collectionView.bounds.size.width - 100) / 2 - 105, bottom: 0, right: collectionView.bounds.size.width / 3)
+        let rightInset = self.collectionViewData.count == 1 ? 0 : collectionView.bounds.size.width / 3
+        return UIEdgeInsets(top: 0, left: (collectionView.bounds.size.width - 100) / 2 - 105, bottom: 0, right: rightInset)
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout
@@ -134,6 +136,9 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
         cell.view.layer.borderColor = UIColor.white.cgColor
         cell.view.layer.borderWidth = 0
         cell.view.addShadow(opacity: 0.20)
+        cell.label.numberOfLines = 0;
+        cell.label.widthAnchor.constraint(equalToConstant: cell.view.frame.width)
+        cell.label.heightAnchor.constraint(equalToConstant: cell.view.frame.height)
         return cell
     }
 }
