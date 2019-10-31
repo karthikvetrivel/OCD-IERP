@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var practiceIERP: UIButton!
     
-    var collectionViewData = [Int:String]()
+    var collectionViewData = [Int:NSAttributedString]()
     //--------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,16 +66,40 @@ class HomeViewController: UIViewController {
                             for i in 0..<iterations {
                                 let index = String(count - 1 - i)
                                 print(index)
+                                var consequence : String = ""
+                                var primaryFear : String = ""
+                                var effect : String = ""
+                                var anxietyLevel : String = ""
                                 doc.collection("exposures").document("exposure" + index).collection("consequences").document("consequence" + index).getDocument(source: .default) { (document, error) in
-                                    data = document!.data()!["primaryConseq"] as! String
-                                    doc.collection("exposures").document("exposure" + index).collection("effect").document("effect" + index).getDocument(source: .default) { (document, error) in
-                                        data = data + "\n" + (document!.data()!["primaryEffect"] as! String)
-                                        print("Gathered Data: " + data)
-                                        self.collectionViewData[i] = data
-                                        data = ""
-                                        dispatchSemaphore.signal()
-                                        if (i == iterations - 1) {
-                                            mainGroup.leave()
+                                    
+                                    consequence = document!.data()!["primaryConseq"] as! String
+                                    
+                                    doc.collection("exposures").document("exposure" + index).getDocument(source: .default) { (document, error) in
+                                        
+                                        primaryFear = document!.data()!["primaryFear"] as! String
+                                        anxietyLevel = String(document!.data()!["anxietyLevel"] as! Int)
+                                        
+                                        doc.collection("exposures").document("exposure" + index).collection("effect").document("effect" + index).getDocument(source: .default) { (document, error) in
+                                            effect = document!.data()!["primaryEffect"] as! String
+
+                                            
+                                            let title: [NSAttributedString.Key: Any] = [
+                                                .font: UIFont.boldSystemFont(ofSize: 22),
+                                                .foregroundColor: UIColor.black,
+                                            ]
+                                            var cardText = NSMutableAttributedString(string: "Fear", attributes: title)
+                                            cardText.append(NSAttributedString(string: "\n" + primaryFear))
+                                            cardText.append(NSAttributedString(string: "\n\n" + "Consequence", attributes: title))
+                                            cardText.append(NSAttributedString(string: "\n" + consequence))
+                                            cardText.append(NSAttributedString(string: "\n\n" + "Effect", attributes: title))
+                                            cardText.append(NSAttributedString(string: "\n" + effect))
+                                            cardText.append(NSAttributedString(string: "\n\n" + "Anxiety Level", attributes: title))
+                                            cardText.append(NSAttributedString(string: "\n" + anxietyLevel))
+                                            self.collectionViewData[i] = cardText
+                                            dispatchSemaphore.signal()
+                                            if (i == iterations - 1) {
+                                                mainGroup.leave()
+                                            }
                                         }
                                     }
                                 }
@@ -129,7 +153,7 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "identifier", for: indexPath) as! HomeUICollectionViewCell
-        cell.label.text = self.collectionViewData[indexPath.row]
+        cell.label.attributedText = self.collectionViewData[indexPath.row]
         cell.backgroundColor = .clear
         cell.view.backgroundColor = .white
         cell.view.layer.cornerRadius = 25
@@ -137,8 +161,7 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
         cell.view.layer.borderWidth = 0
         cell.view.addShadow(opacity: 0.20)
         cell.label.numberOfLines = 0;
-        cell.label.widthAnchor.constraint(equalToConstant: cell.view.frame.width)
-        cell.label.heightAnchor.constraint(equalToConstant: cell.view.frame.height)
+        cell.label.lineBreakMode = .byWordWrapping
         return cell
     }
 }
