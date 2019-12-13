@@ -24,6 +24,7 @@ class AnxietyViewController: UIViewController{
     
     override func viewDidLoad() {
         floatingButton()
+     
         
     }
     

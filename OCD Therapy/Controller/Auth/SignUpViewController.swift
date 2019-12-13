@@ -12,6 +12,7 @@ import Firebase
 import FirebaseFirestore
 import ChameleonFramework
 import GoogleSignIn
+import PopupDialog
 
 class SignUpViewController: UIViewController {
     
@@ -102,18 +103,30 @@ class SignUpViewController: UIViewController {
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if (!ParseUtility.verifyEmail(email: email)) {
             // TODO: Prompt a proper email must be entered
+            let alert = PopupDialog(title: "Error", message: "Proper email must be entered.")
+            let confirm = DefaultButton(title: "Ok") {}
+            alert.addButton(confirm)
+            self.present(alert, animated: true, completion: nil)
             return
         }
         
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if (!ParseUtility.verifyPassword(password: password)) {
             // TODO: A proper password must be entered. Display requirements
+            let alert = PopupDialog(title: "Error", message: "Proper password must be entered. Must be 6 character. 1 capital. 1 digit.")
+            let confirm = DefaultButton(title: "Ok") {}
+            alert.addButton(confirm)
+            self.present(alert, animated: true, completion: nil)
             return
         }
         
         let fullName = fullNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if (fullName.isEmpty) {
             // TODO: Display error message
+            let alert = PopupDialog(title: "Error", message: "Proper name must be entered.")
+            let confirm = DefaultButton(title: "Ok") {}
+            alert.addButton(confirm)
+            self.present(alert, animated: true, completion: nil)
             return
         }
         
